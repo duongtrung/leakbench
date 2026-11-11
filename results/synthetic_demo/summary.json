@@ -1,0 +1,64 @@
+{
+  "ablation_advantage": {
+    "length_only": 0.05113636363636364,
+    "size_only": 0.36931818181818177,
+    "size_plus_timing_all": 0.5681818181818181,
+    "timing_only": 0.35795454545454547
+  },
+  "advantage_by_vantage": {
+    "network": 0.5681818181818181,
+    "platform": 0.8522727272727273,
+    "providers": 0.9829545454545454
+  },
+  "defense_frontier": [
+    {
+      "advantage": 0.5681818181818181,
+      "bandwidth_overhead": 0.0,
+      "defense": "none"
+    },
+    {
+      "advantage": 0.6022727272727272,
+      "bandwidth_overhead": 0.21398953032256765,
+      "defense": "pad-512"
+    },
+    {
+      "advantage": 0.5681818181818181,
+      "bandwidth_overhead": 0.0,
+      "defense": "shuffle"
+    },
+    {
+      "advantage": 0.5454545454545454,
+      "bandwidth_overhead": 0.0,
+      "defense": "constant-rate"
+    },
+    {
+      "advantage": 0.5284090909090908,
+      "bandwidth_overhead": 0.9220002676293008,
+      "defense": "cover"
+    },
+    {
+      "advantage": 0.3181818181818182,
+      "bandwidth_overhead": 41.75610409436859,
+      "defense": "pad-max"
+    },
+    {
+      "advantage": 0.19886363636363633,
+      "bandwidth_overhead": 81.13321080579681,
+      "defense": "full"
+    }
+  ],
+  "entropy_bits": 3.584962500721156,
+  "estimator_max_mi_error_bits": 0.3981982448434853,
+  "label": "synthetic smoke-test output, not a paper result",
+  "refinement_warnings": [],
+  "subgroup_by_family": {
+    "coding": 0.8636363636363636,
+    "ops": 0.7954545454545454,
+    "personal": 0.9545454545454546,
+    "research": 0.7954545454545454
+  },
+  "subgroup_by_length": {
+    "long": 0.8636363636363636,
+    "short": 0.8426573426573426
+  }
+}

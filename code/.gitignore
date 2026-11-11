@@ -1,0 +1,50 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+*.so
+.DS_Store
+
+# Credentials. NEVER commit these: the LLM-backed paths read keys from the
+# environment or from a local .env that stays on your machine.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Experiment outputs. Smoke-test and scratch runs are regenerated and stay out of
+# version control; the **paper-scale results are tracked on purpose**, so a reviewer
+# can tie every number in the paper to the run that produced it (each file carries its
+# own provenance block, and `paper_numbers.tex` is generated from them).
+#
+# Note the single `*`: `outputs/**` would exclude the directories themselves and git
+# cannot re-include a path inside an excluded directory.
+outputs/*
+!outputs/.gitkeep
+!outputs/scale_study/
+!outputs/live_neural/
+!outputs/wan/
+
+# Run logs stay local: they capture absolute paths, tracebacks, and (for the
+# LLM-planner runs) fragments of model output. The JSON results carry every number
+# the paper reports, each with its own provenance block, so nothing is lost.
+outputs/**/*.log
+outputs/**/*.stderr.log
+
+# Cross-model sweep results back the cross-model table; keep the JSON, not the logs.
+!outputs/llm_sweep/
+!outputs/llm_sweep/**/*.json
+
+# Superseded/duplicate runs kept locally as backup. The runs the paper reports are
+# scale_study/, live_neural/, wan/ and llm_sweep/; publishing the archive alongside
+# them would leave a reader guessing which run backs which number.
+outputs/_archive/

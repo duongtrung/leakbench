@@ -1,0 +1,6 @@
+level,seed,sessions,network,platform,providers_colluding,single_provider_median,single_provider_max
+Synthetic (12 cl.),20270214,7200,"0.64 [0.62, 0.66]","0.87 [0.86, 0.89]","0.99 [0.99, 1.00]",0.31,"0.34 [0.32, 0.36] (search, in 54% of sessions)"
+L-prog loopback (6 cl.),20270215,420,"0.42 [0.33, 0.51]","0.81 [0.74, 0.88]","0.79 [0.73, 0.86]",0.21,"0.44 [0.34, 0.51] (search, in 64% of sessions)"
+"WAN, scripted (6 cl.)",20270215,420,"0.38 [0.29, 0.47]","0.82 [0.75, 0.89]","0.81 [0.74, 0.87]",0.23,"0.40 [0.32, 0.49] (search, in 64% of sessions)"
+L-LLM local Q4 (6 cl.),20270214,150,"0.80 [0.66, 0.90]","1.00 [1.00, 1.00]","1.00 [1.00, 1.00]",0.40,"0.80 [0.68, 0.90] (search, in 83% of sessions)"
+L-LLM local Q4 (6 cl.),20270215,150,"0.88 [0.78, 0.96]","0.96 [0.90, 1.00]","0.96 [0.90, 1.00]",0.38,"0.66 [0.54, 0.80] (search, in 83% of sessions)"

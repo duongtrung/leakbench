@@ -1,0 +1,14 @@
+{
+  "loopback_seed20270215": {
+    "size_only": 0.4643,
+    "timing_only": 0.2429
+  },
+  "wan_seed20270215": {
+    "size_only": 0.4071,
+    "timing_only": 0.1857
+  },
+  "check_llm_local_seed20270214": {
+    "size_only": 0.76,
+    "timing_only": 0.72
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "status": "real_computation_at_paper_scale",
+  "result": {
+    "rq": "measured_harness_repeatability",
+    "seed": 20270214,
+    "repeats": 5,
+    "traces_per_class": 130,
+    "overlap": 0.15,
+    "runs": [
+      {
+        "network": 0.1503496503496503,
+        "platform": 0.5874125874125874,
+        "providers": 0.7902097902097902,
+        "_total_bytes": 54352525.0,
+        "_median_gap_s": 0.0001651659986237064
+      },
+      {
+        "network": 0.14685314685314682,
+        "platform": 0.5874125874125874,
+        "providers": 0.7884615384615384,
+        "_total_bytes": 54352525.0,
+        "_median_gap_s": 0.00016974999743979424
+      },
+      {
+        "network": 0.1328671328671329,
+        "platform": 0.5874125874125874,
+        "providers": 0.7902097902097902,
+        "_total_bytes": 54352525.0,
+        "_median_gap_s": 0.0001692079968051985
+      },
+      {
+        "network": 0.1538461538461538,
+        "platform": 0.5646853146853147,
+        "providers": 0.7972027972027972,
+        "_total_bytes": 54352525.0,
+        "_median_gap_s": 0.00018195899610873312
+      },
+      {
+        "network": 0.15209790209790205,
+        "platform": 0.5874125874125874,
+        "providers": 0.7902097902097902,
+        "_total_bytes": 54352525.0,
+        "_median_gap_s": 0.0001717080012895167
+      }
+    ],
+    "summary": {
+      "network": {
+        "mean": 0.14720279720279716,
+        "std": 0.008420695509644933,
+        "min": 0.1328671328671329,
+        "max": 0.1538461538461538,
+        "range": 0.020979020979020907
+      },
+      "platform": {
+        "mean": 0.5828671328671329,
+        "std": 0.010163945352271763,
+        "min": 0.5646853146853147,
+        "max": 0.5874125874125874,
+        "range": 0.022727272727272707
+      },
+      "providers": {
+        "mean": 0.7912587412587413,
+        "std": 0.0034079700506325036,
+        "min": 0.7884615384615384,
+        "max": 0.7972027972027972,
+        "range": 0.00874125874125875
+      }
+    },
+    "payload_bytes_identical_across_repeats": true,
+    "note": "same seed, separate processes. Sizes are deterministic because the tools return what they return; inter-call gaps are real wall-clock and are not, so the network vantage -- the one that depends on timing -- carries a repeat spread that the bootstrap CI does not cover and the cross-seed std does not separate out"
+  },
+  "provenance": {
+    "python_version": "3.14.7",
+    "platform": "macOS-26.5-arm64-arm-64bit-Mach-O",
+    "elapsed_s": 27.0765540599823
+  }
+}

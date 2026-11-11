@@ -1,0 +1,169 @@
+{
+  "elapsed_s": 14.045552492141724,
+  "provenance": {
+    "config": {
+      "args": {
+        "draws": 8,
+        "generator_config": "configs/default.yaml",
+        "live_per_class": 70,
+        "measured_config": "configs/measured.yaml",
+        "no_tls": false,
+        "only": null,
+        "openworld_total": 24000,
+        "output": "outputs/scale_study",
+        "quick": false,
+        "seeds": 5,
+        "skip": null,
+        "tax_sizes": [
+          8,
+          12,
+          16,
+          24
+        ],
+        "validation_per_class": 300
+      },
+      "generator": {
+        "bank": [
+          "random_forest",
+          "knn"
+        ],
+        "bootstrap": 200,
+        "data_root": null,
+        "defenses": [
+          "none",
+          "pad-512",
+          "shuffle",
+          "constant-rate",
+          "cover",
+          "pad-max",
+          "full"
+        ],
+        "name": "default",
+        "num_classes": 12,
+        "output_dir": "outputs/default",
+        "overlap": 0.5,
+        "prior": "uniform",
+        "seed": 20270214,
+        "signature_upweight": 0.9,
+        "source": "generator",
+        "test_size": 0.4,
+        "traces_per_class": 600,
+        "vantages": [
+          "network",
+          "platform",
+          "providers"
+        ]
+      },
+      "measured": {
+        "bank": [
+          "random_forest",
+          "knn"
+        ],
+        "bootstrap": 100,
+        "data_root": null,
+        "defenses": [
+          "none",
+          "pad-512",
+          "shuffle",
+          "constant-rate",
+          "cover",
+          "pad-max",
+          "full"
+        ],
+        "name": "measured",
+        "num_classes": 12,
+        "output_dir": "outputs/measured",
+        "overlap": 0.15,
+        "prior": "uniform",
+        "seed": 20270214,
+        "signature_upweight": 0.9,
+        "source": "measured",
+        "test_size": 0.4,
+        "traces_per_class": 130,
+        "vantages": [
+          "network",
+          "platform",
+          "providers"
+        ]
+      }
+    },
+    "leakbench_version": "0.1.0",
+    "note": "paper-scale study",
+    "platform": "Linux-7.0.0-1006-aws-x86_64-with-glibc2.43",
+    "python_version": "3.14.4",
+    "seed": 20270214,
+    "taxonomy_hash": "8ba36962dec5",
+    "taxonomy_name": "tax-v1/12c-4f"
+  },
+  "result": {
+    "note": "only size padding neutralizes the channel, at order-of-magnitude cost",
+    "rows": [
+      {
+        "advantage": 0.6375,
+        "bandwidth_overhead": 0.0,
+        "defense": "none",
+        "latency_overhead": 0.0,
+        "mi_bits": 2.01167755524789
+      },
+      {
+        "advantage": 0.625,
+        "bandwidth_overhead": 0.2127037540378654,
+        "defense": "pad-512",
+        "latency_overhead": 0.0,
+        "mi_bits": 1.9755642252666727
+      },
+      {
+        "advantage": 0.6375,
+        "bandwidth_overhead": 0.0,
+        "defense": "shuffle",
+        "latency_overhead": 0.0,
+        "mi_bits": 2.01167755524789
+      },
+      {
+        "advantage": 0.6151515151515151,
+        "bandwidth_overhead": 0.0,
+        "defense": "constant-rate",
+        "latency_overhead": 0.0,
+        "mi_bits": 1.9033953486338762
+      },
+      {
+        "advantage": 0.5981060606060606,
+        "bandwidth_overhead": 0.9027170428912786,
+        "defense": "cover",
+        "latency_overhead": 0.8952286904959441,
+        "mi_bits": 1.8520357702114558
+      },
+      {
+        "advantage": 0.33333333333333326,
+        "bandwidth_overhead": 41.63259240299394,
+        "defense": "pad-max",
+        "latency_overhead": 0.0,
+        "mi_bits": 1.1315198632101855
+      },
+      {
+        "advantage": 0.21969696969696964,
+        "bandwidth_overhead": 79.96213834679578,
+        "defense": "full",
+        "latency_overhead": 0.9845489982768666,
+        "mi_bits": 0.8476664521296907
+      },
+      {
+        "advantage": 0.11401515151515154,
+        "bandwidth_overhead": 0.45963240491360685,
+        "defense": "gen-shaping",
+        "latency_overhead": 0.6682511324590209,
+        "mi_bits": 0.29475026769866386
+      },
+      {
+        "advantage": 0.00454545454545453,
+        "bandwidth_overhead": 6.0675207752873,
+        "defense": "dp-shaping",
+        "latency_overhead": 1.147325448628192,
+        "mi_bits": 0.026689165257498357
+      }
+    ],
+    "rq": "RQ4_defenses",
+    "vantage": "network"
+  },
+  "status": "real_computation_at_paper_scale"
+}

@@ -1,0 +1,164 @@
+{
+  "elapsed_s": 10.021538019180298,
+  "provenance": {
+    "config": {
+      "args": {
+        "draws": 8,
+        "generator_config": "configs/default.yaml",
+        "live_per_class": 70,
+        "measured_config": "configs/measured.yaml",
+        "no_tls": false,
+        "only": null,
+        "openworld_total": 24000,
+        "output": "outputs/scale_study",
+        "quick": false,
+        "seeds": 5,
+        "skip": null,
+        "tax_sizes": [
+          8,
+          12,
+          16,
+          24
+        ],
+        "validation_per_class": 300
+      },
+      "generator": {
+        "bank": [
+          "random_forest",
+          "knn"
+        ],
+        "bootstrap": 200,
+        "data_root": null,
+        "defenses": [
+          "none",
+          "pad-512",
+          "shuffle",
+          "constant-rate",
+          "cover",
+          "pad-max",
+          "full"
+        ],
+        "name": "default",
+        "num_classes": 12,
+        "output_dir": "outputs/default",
+        "overlap": 0.5,
+        "prior": "uniform",
+        "seed": 20270214,
+        "signature_upweight": 0.9,
+        "source": "generator",
+        "test_size": 0.4,
+        "traces_per_class": 600,
+        "vantages": [
+          "network",
+          "platform",
+          "providers"
+        ]
+      },
+      "measured": {
+        "bank": [
+          "random_forest",
+          "knn"
+        ],
+        "bootstrap": 100,
+        "data_root": null,
+        "defenses": [
+          "none",
+          "pad-512",
+          "shuffle",
+          "constant-rate",
+          "cover",
+          "pad-max",
+          "full"
+        ],
+        "name": "measured",
+        "num_classes": 12,
+        "output_dir": "outputs/measured",
+        "overlap": 0.15,
+        "prior": "uniform",
+        "seed": 20270214,
+        "signature_upweight": 0.9,
+        "source": "measured",
+        "test_size": 0.4,
+        "traces_per_class": 130,
+        "vantages": [
+          "network",
+          "platform",
+          "providers"
+        ]
+      }
+    },
+    "leakbench_version": "0.1.0",
+    "note": "paper-scale study",
+    "platform": "Linux-7.0.0-1006-aws-x86_64-with-glibc2.43",
+    "python_version": "3.14.4",
+    "seed": 20270214,
+    "taxonomy_hash": "8ba36962dec5",
+    "taxonomy_name": "tax-v1/12c-4f"
+  },
+  "result": {
+    "note": "precision should hold while recall collapses as monitored tasks become rare",
+    "rows": [
+      {
+        "accuracy": 0.8628125,
+        "best_estimator": "random_forest",
+        "f1": 0.8172649387268192,
+        "fn": 1032,
+        "fp": 653,
+        "monitored_base_rate": 0.5,
+        "n_monitored": 12000,
+        "n_monitored_per_class": 1000,
+        "n_other": 12000,
+        "other_kind": "out_of_taxonomy_random_tool_mix",
+        "precision": 0.852295860665008,
+        "recall": 0.785,
+        "tp": 3768
+      },
+      {
+        "accuracy": 0.90375,
+        "best_estimator": "random_forest",
+        "f1": 0.6863354037267081,
+        "fn": 815,
+        "fp": 195,
+        "monitored_base_rate": 0.2,
+        "n_monitored": 4800,
+        "n_monitored_per_class": 400,
+        "n_other": 19200,
+        "other_kind": "out_of_taxonomy_random_tool_mix",
+        "precision": 0.85,
+        "recall": 0.5755208333333334,
+        "tp": 1105
+      },
+      {
+        "accuracy": 0.9564583333333333,
+        "best_estimator": "random_forest",
+        "f1": 0.24199288256227758,
+        "fn": 412,
+        "fp": 14,
+        "monitored_base_rate": 0.05,
+        "n_monitored": 1200,
+        "n_monitored_per_class": 100,
+        "n_other": 22800,
+        "other_kind": "out_of_taxonomy_random_tool_mix",
+        "precision": 0.8292682926829268,
+        "recall": 0.14166666666666666,
+        "tp": 68
+      }
+    ],
+    "rq": "openworld",
+    "total_traces": 24000,
+    "vantage": "platform",
+    "within_taxonomy": {
+      "accuracy": 0.9496527777777778,
+      "best_estimator": "random_forest",
+      "f1": 0.905160390516039,
+      "fn": 142,
+      "fp": 130,
+      "n_monitored_classes": 6,
+      "other_kind": "within_taxonomy_fold",
+      "precision": 0.9089635854341737,
+      "recall": 0.9013888888888889,
+      "tp": 1298
+    }
+  },
+  "status": "real_computation_at_paper_scale"
+}

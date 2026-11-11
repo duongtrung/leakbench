@@ -1,0 +1,19 @@
+# LeakBench default configuration --- the calibrated-generator reference study
+# (paper §Eval RQ1-RQ5). Runs a real computation on synthetic data.
+#
+# NOTE: the paper uses 600 traces/class (7,200 total). That runs in a few minutes
+# on a laptop CPU. Reduce traces_per_class for a faster pass.
+
+name: default
+source: generator
+num_classes: 12
+traces_per_class: 600
+seed: 20270214
+signature_upweight: 0.9        # generator separability knob (default 0.9)
+bank: [random_forest, knn]     # core estimator bank
+bootstrap: 200                 # B for advantage CIs (paper: 200 main)
+test_size: 0.4                 # stratified 60/40 split
+vantages: [network, platform, providers]
+defenses: [none, pad-512, shuffle, constant-rate, cover, pad-max, full]
+prior: uniform                 # uniform | zipf
+output_dir: outputs/default

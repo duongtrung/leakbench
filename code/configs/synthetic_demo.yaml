@@ -1,0 +1,17 @@
+# LeakBench synthetic smoke-test demo --- small + fast, for the quick-start.
+# Every output produced from this config is labeled
+#   "synthetic smoke-test output, not a paper result".
+
+name: synthetic_demo
+source: generator
+num_classes: 12
+traces_per_class: 40           # small for speed; NOT the paper's 600
+seed: 20270214
+signature_upweight: 0.9
+bank: [random_forest, knn]
+bootstrap: 50                  # smaller B for the demo
+test_size: 0.4
+vantages: [network, platform, providers]
+defenses: [none, pad-512, shuffle, constant-rate, cover, pad-max, full]
+prior: uniform
+output_dir: outputs/synthetic_demo

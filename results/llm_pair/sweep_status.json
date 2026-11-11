@@ -1,0 +1,4 @@
+{
+  "gpt-oss-20b-openrouter": "failed: ValueError: the model produced no usable tool call for task 'debug_failing_test' in 3 attempts; last reply was 'We need to debug failing test. We need to run tests? We have no code. Likely we need to ",
+  "gpt-oss-20b-bedrock": "failed: leakbench.data.llm.LLMError: bedrock returned HTTP 401: {\"error\":{\"message\":\"Authentication failed: Please make sure your API Key is valid.\",\"type\":\"permission_denied_error\",\"param\":null,\"code\":\"acces"
+}

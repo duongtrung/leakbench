@@ -1,0 +1,27 @@
+# LeakBench experiment template --- copy and edit for a new study.
+#
+# To run on a REAL dataset (placed manually on EC2; never auto-downloaded), point
+# `data.root` at a directory laid out per docs/data_format.md, and implement/select a
+# framework adapter (docs/baseline_adapters.md). Until then, `source: generator`
+# produces reproducible synthetic traces.
+
+name: my_experiment
+source: generator                # generator | measured | real
+num_classes: 12
+traces_per_class: 200
+seed: 20270214
+signature_upweight: 0.9
+overlap: 0.5
+bank: [random_forest, knn]       # add hist_gbdt, logistic for a robustness bank
+bootstrap: 200
+test_size: 0.4
+vantages: [network, platform, providers]
+# WF toolbox + the two learned/DP shapers (see docs/baseline_adapters.md §2):
+defenses: [none, pad-512, cover, pad-max, full, gen-shaping, dp-shaping]
+prior: uniform                   # uniform | zipf
+output_dir: outputs/my_experiment
+
+# Real-data root (optional). LeakBench NEVER downloads data; place it here yourself.
+# With `source: real` this is required, and every stage then runs on your traces.
+data:
+  root: null                     # e.g. /data/leakbench/traces  (see docs/data_format.md)

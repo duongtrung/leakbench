@@ -1,0 +1,110 @@
+{
+  "status": "real_computation_at_paper_scale",
+  "result": {
+    "rq": "vantage_ordering_vs_sample_size",
+    "traces": "outputs/wan/traces_loopback_seed20270215.jsonl",
+    "rows": [
+      {
+        "per_class": 25,
+        "n_sessions": 150,
+        "advantage_mean_sd": {
+          "network": [
+            0.45600000000000007,
+            0.10139033484509259
+          ],
+          "platform": [
+            0.8039999999999999,
+            0.04560701700396558
+          ],
+          "providers": [
+            0.784,
+            0.060663003552412414
+          ]
+        },
+        "prov_minus_plat_mean": -0.019999999999999997,
+        "prov_minus_plat_sd": 0.04898979485566366,
+        "prov_ge_plat_in_draws": 2,
+        "repeats": 5
+      },
+      {
+        "per_class": 35,
+        "n_sessions": 210,
+        "advantage_mean_sd": {
+          "network": [
+            0.4685714285714286,
+            0.02118913853455904
+          ],
+          "platform": [
+            0.7514285714285714,
+            0.029623487647610972
+          ],
+          "providers": [
+            0.7799999999999999,
+            0.029623487647611035
+          ]
+        },
+        "prov_minus_plat_mean": 0.028571428571428536,
+        "prov_minus_plat_sd": 0.017496355305594135,
+        "prov_ge_plat_in_draws": 5,
+        "repeats": 5
+      },
+      {
+        "per_class": 50,
+        "n_sessions": 300,
+        "advantage_mean_sd": {
+          "network": [
+            0.48600000000000004,
+            0.04505552130427524
+          ],
+          "platform": [
+            0.768,
+            0.017888543819998336
+          ],
+          "providers": [
+            0.782,
+            0.023874672772626667
+          ]
+        },
+        "prov_minus_plat_mean": 0.014000000000000012,
+        "prov_minus_plat_sd": 0.026076809620810618,
+        "prov_ge_plat_in_draws": 4,
+        "repeats": 5
+      },
+      {
+        "per_class": 70,
+        "n_sessions": 420,
+        "advantage_mean_sd": {
+          "network": [
+            0.5742857142857142,
+            0.025555062599997562
+          ],
+          "platform": [
+            0.7871428571428571,
+            0.019166296949998187
+          ],
+          "providers": [
+            0.8099999999999999,
+            0.01297564437470349
+          ]
+        },
+        "prov_minus_plat_mean": 0.022857142857142843,
+        "prov_minus_plat_sd": 0.023364896048280143,
+        "prov_ge_plat_in_draws": 4,
+        "repeats": 5
+      }
+    ],
+    "verdict": {
+      "gap_at_smallest_n": -0.019999999999999997,
+      "gap_at_largest_n": 0.022857142857142843,
+      "gap_grows_with_n": true,
+      "prov_ge_plat_at_largest_n": "4/5",
+      "reading": "the refinement bound constrains the population channel; advantage is a finite-sample lower bound, and the provider observable is the highest-dimensional one, so it is the first to be under-sampled"
+    }
+  },
+  "provenance": {
+    "python_version": "3.14.7",
+    "platform": "macOS-26.5-arm64-arm-64bit-Mach-O",
+    "seed": 20270214,
+    "note": "subsamples of a stored live capture; no new capture"
+  }
+}

@@ -1,0 +1,9 @@
+up to 1800 completions
+[18:37:44] INFO leakbench.data.live_capture: literature_review: 25/25 sessions (25/150 total, 4.0/min, ~31 min left)
+[18:43:52] INFO leakbench.data.live_capture: trip_planning: 25/25 sessions (50/150 total, 4.1/min, ~25 min left)
+[18:50:08] INFO leakbench.data.live_capture: debug_failing_test: 25/25 sessions (75/150 total, 4.0/min, ~19 min left)
+[18:56:10] INFO leakbench.data.live_capture: status_reporting: 25/25 sessions (100/150 total, 4.1/min, ~12 min left)
+[19:02:20] INFO leakbench.data.live_capture: market_scan: 25/25 sessions (125/150 total, 4.1/min, ~6 min left)
+[19:08:25] INFO leakbench.data.live_capture: meeting_scheduling: 25/25 sessions (150/150 total, 4.1/min, ~0 min left)
+[19:08:26] INFO leakbench.experiments.runners: live seed 20270214: {'network': 0.8, 'platform': 1.0, 'providers': 1.0}
+{'network': 0.8, 'platform': 1.0, 'providers': 1.0} {'size_only': 0.7599999999999999, 'timing_only': 0.7200000000000001} {'provider': 'custom', 'model': 'llama3.3:70b', 'base_url': 'http://localhost:11434/v1', 'calls': 1800, 'prompt_tokens': 349726, 'completion_tokens': 27848, 'served_via': 'local Ollama 0.40.15, llama3.3:70b Q4_K_M, one workstation'}

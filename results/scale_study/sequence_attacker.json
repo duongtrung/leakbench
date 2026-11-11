@@ -1,0 +1,159 @@
+{
+  "elapsed_s": 12.830434083938599,
+  "provenance": {
+    "config": {
+      "args": {
+        "draws": 8,
+        "generator_config": "configs/default.yaml",
+        "live_per_class": 70,
+        "measured_config": "configs/measured.yaml",
+        "no_tls": false,
+        "only": null,
+        "openworld_total": 24000,
+        "output": "outputs/scale_study",
+        "quick": false,
+        "seeds": 5,
+        "skip": null,
+        "tax_sizes": [
+          8,
+          12,
+          16,
+          24
+        ],
+        "validation_per_class": 300
+      },
+      "generator": {
+        "bank": [
+          "random_forest",
+          "knn"
+        ],
+        "bootstrap": 200,
+        "data_root": null,
+        "defenses": [
+          "none",
+          "pad-512",
+          "shuffle",
+          "constant-rate",
+          "cover",
+          "pad-max",
+          "full"
+        ],
+        "name": "default",
+        "num_classes": 12,
+        "output_dir": "outputs/default",
+        "overlap": 0.5,
+        "prior": "uniform",
+        "seed": 20270214,
+        "signature_upweight": 0.9,
+        "source": "generator",
+        "test_size": 0.4,
+        "traces_per_class": 600,
+        "vantages": [
+          "network",
+          "platform",
+          "providers"
+        ]
+      },
+      "measured": {
+        "bank": [
+          "random_forest",
+          "knn"
+        ],
+        "bootstrap": 100,
+        "data_root": null,
+        "defenses": [
+          "none",
+          "pad-512",
+          "shuffle",
+          "constant-rate",
+          "cover",
+          "pad-max",
+          "full"
+        ],
+        "name": "measured",
+        "num_classes": 12,
+        "output_dir": "outputs/measured",
+        "overlap": 0.15,
+        "prior": "uniform",
+        "seed": 20270214,
+        "signature_upweight": 0.9,
+        "source": "measured",
+        "test_size": 0.4,
+        "traces_per_class": 130,
+        "vantages": [
+          "network",
+          "platform",
+          "providers"
+        ]
+      }
+    },
+    "leakbench_version": "0.1.0",
+    "note": "paper-scale study",
+    "platform": "Linux-7.0.0-1006-aws-x86_64-with-glibc2.43",
+    "python_version": "3.14.4",
+    "seed": 20270214,
+    "taxonomy_hash": "8ba36962dec5",
+    "taxonomy_name": "tax-v1/12c-4f"
+  },
+  "result": {
+    "advantage_gain": {
+      "network": -0.0818181818181819,
+      "platform": -0.03674242424242413,
+      "providers": -0.060227272727272685
+    },
+    "max_len": 32,
+    "note": "same vantage, same information, un-aggregated representation. A positive gain means the histogram features under-report leakage, since advantage is only ever a lower bound.",
+    "rows": {
+      "network": {
+        "advantage_gain": -0.0818181818181819,
+        "mi_gain_bits": -0.2702156304616188,
+        "n_features_sequence": 96,
+        "n_features_summary": 31,
+        "sequence_advantage": 0.555681818181818,
+        "sequence_advantage_ci": [
+          0.5397727272727273,
+          0.5761553030303029
+        ],
+        "sequence_best_estimator": "random_forest",
+        "sequence_mi_bits": 1.7414619247862713,
+        "summary_advantage": 0.6375,
+        "summary_mi_bits": 2.01167755524789
+      },
+      "platform": {
+        "advantage_gain": -0.03674242424242413,
+        "mi_gain_bits": -0.11408003259037747,
+        "n_features_sequence": 320,
+        "n_features_summary": 80,
+        "sequence_advantage": 0.8397727272727273,
+        "sequence_advantage_ci": [
+          0.823844696969697,
+          0.8546685606060606
+        ],
+        "sequence_best_estimator": "mlp",
+        "sequence_mi_bits": 2.919273600441983,
+        "summary_advantage": 0.8765151515151515,
+        "summary_mi_bits": 3.0333536330323603
+      },
+      "providers": {
+        "advantage_gain": -0.060227272727272685,
+        "mi_gain_bits": -0.3351677867712901,
+        "n_features_sequence": 384,
+        "n_features_summary": 127,
+        "sequence_advantage": 0.9325757575757576,
+        "sequence_advantage_ci": [
+          0.9217613636363636,
+          0.9420833333333333
+        ],
+        "sequence_best_estimator": "random_forest",
+        "sequence_mi_bits": 3.1918700310422814,
+        "summary_advantage": 0.9928030303030303,
+        "summary_mi_bits": 3.5270378178135715
+      }
+    },
+    "rq": "sequence_attacker",
+    "source": "generator",
+    "tightens_bound_at": [],
+    "truncation_rate": 0.0
+  },
+  "status": "real_computation_at_paper_scale"
+}

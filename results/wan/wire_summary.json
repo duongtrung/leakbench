@@ -1,0 +1,52 @@
+{
+  "status": "wire_capture_summary",
+  "result": {
+    "pcap": "<redacted>/wan_run1.pcap",
+    "capture_seconds": 7659.816482067108,
+    "client_ip": "<client>",
+    "upstream": {
+      "packets": 5076,
+      "bytes_on_wire": 1361128.0,
+      "size_median": 152.0,
+      "size_p90": 232.0,
+      "size_max": 1608.0,
+      "_label": "client->server"
+    },
+    "downstream": {
+      "packets": 7978,
+      "bytes_on_wire": 7723468.0,
+      "size_median": 1192.0,
+      "size_p90": 1452.0,
+      "size_max": 1452.0,
+      "_label": "server->client"
+    },
+    "retransmitted_or_duplicate_segments": 0,
+    "host_interface_mtu": 9001,
+    "path_mtu_clamped": true,
+    "server_service_time_s": {
+      "median": 0.0009580850601196289,
+      "p90": 0.0013567924499511721,
+      "_what": "server NIC: request in -> first response byte out"
+    },
+    "round_trip_plus_client_s": {
+      "median": 0.24883031845092773,
+      "p10": 0.24358434677124025,
+      "p90": 0.28586289882659915,
+      "_what": "server NIC: last response byte out -> next request in; contains the full propagation delay both ways",
+      "n_intervals": 2932,
+      "n_idle_intervals_excluded": 459,
+      "idle_threshold_s": 2.0
+    },
+    "inter_packet_gap_s": {
+      "median": 0.0006170272827148438,
+      "p99": 15.001592874526978
+    },
+    "note": "corroboration that the link is a real internet path, not a second observable: the measured traffic rides inside an SSH tunnel, so these packet boundaries are the tunnel's framing",
+    "largest_egress_ip_packet": 1452.0,
+    "largest_ingress_ip_packet": 1608.0,
+    "ingress_note": "may exceed the path MTU: receive offload can merge segments before the capture point, so only the egress figure is evidence about the path"
+  },
+  "provenance": {
+    "migration_note": "the two direction-specific PMTU fields were re-derived from upstream/downstream size_max already present in this file, after analyze_wan_pcap.py was corrected to take PMTU evidence from the egress direction only; re-running the analyzer on the original capture reproduces this file"
+  }
+}

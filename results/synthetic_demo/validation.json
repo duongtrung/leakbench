@@ -1,0 +1,101 @@
+{
+  "provenance": {
+    "config": {
+      "bank": [
+        "random_forest",
+        "knn"
+      ],
+      "bootstrap": 50,
+      "data_root": null,
+      "defenses": [
+        "none",
+        "pad-512",
+        "shuffle",
+        "constant-rate",
+        "cover",
+        "pad-max",
+        "full"
+      ],
+      "name": "synthetic_demo",
+      "num_classes": 12,
+      "output_dir": "outputs/synthetic_demo",
+      "overlap": 0.5,
+      "prior": "uniform",
+      "seed": 20270214,
+      "signature_upweight": 0.9,
+      "source": "generator",
+      "test_size": 0.4,
+      "traces_per_class": 40,
+      "vantages": [
+        "network",
+        "platform",
+        "providers"
+      ]
+    },
+    "leakbench_version": "0.1.0",
+    "note": "synthetic smoke-test output, not a paper result",
+    "platform": "Linux-6.18.5-fc-v18-x86_64-with-glibc2.39",
+    "python_version": "3.11.15",
+    "seed": 20270214,
+    "taxonomy_hash": "8ba36962dec5",
+    "taxonomy_name": "tax-v1/12c-4f"
+  },
+  "result": {
+    "K": 12,
+    "max_mi_abs_error": 0.3981982448434853,
+    "note": "estimated MI is a LOWER bound; it should track (from below) the analytic curve",
+    "rows": [
+      {
+        "analytic_bayes_risk": 0.0,
+        "analytic_mi_bits": 3.584962500721156,
+        "estimated_bayes_risk": 0.0,
+        "estimated_mi_bits": 3.584962500721156,
+        "mi_abs_error": 0.0,
+        "p": 0.0
+      },
+      {
+        "analytic_bayes_risk": 0.18333333333333324,
+        "analytic_mi_bits": 2.2634182778067244,
+        "estimated_bayes_risk": 0.15138888888888888,
+        "estimated_mi_bits": 2.613068734810735,
+        "mi_abs_error": 0.34965045700401065,
+        "p": 0.2
+      },
+      {
+        "analytic_bayes_risk": 0.3666666666666667,
+        "analytic_mi_bits": 1.3684259969602417,
+        "estimated_bayes_risk": 0.3486111111111111,
+        "estimated_mi_bits": 1.5839127795386807,
+        "mi_abs_error": 0.215486782578439,
+        "p": 0.4
+      },
+      {
+        "analytic_bayes_risk": 0.55,
+        "analytic_mi_bits": 0.6895006564828345,
+        "estimated_bayes_risk": 0.4791666666666667,
+        "estimated_mi_bits": 1.0876989013263199,
+        "mi_abs_error": 0.3981982448434853,
+        "p": 0.6
+      },
+      {
+        "analytic_bayes_risk": 0.7333333333333334,
+        "analytic_mi_bits": 0.21140523844597103,
+        "estimated_bayes_risk": 0.7319444444444444,
+        "estimated_mi_bits": 0.3564210276733777,
+        "mi_abs_error": 0.14501578922740666,
+        "p": 0.8
+      },
+      {
+        "analytic_bayes_risk": 0.8708333333333333,
+        "analytic_mi_bits": 0.01722580482806446,
+        "estimated_bayes_risk": 0.8972222222222223,
+        "estimated_mi_bits": 0.16660865674522696,
+        "mi_abs_error": 0.1493828519171625,
+        "p": 0.95
+      }
+    ],
+    "rq": "RQ5_validation"
+  },
+  "status": "synthetic smoke-test output, not a paper result",
+  "warning": "These numbers are from the calibrated generator, not a deployed system. Do not cite as paper results."
+}

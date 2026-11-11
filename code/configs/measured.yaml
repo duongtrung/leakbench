@@ -1,0 +1,25 @@
+# LeakBench measured-harness configuration (paper §Eval RQ6).
+# Runs REAL local tools (in-process code exec, SQLite, file I/O, corpus search) and
+# records true byte sizes + true wall-clock timing. Network vantage uses the TLS +
+# HTTP/2 wire model. No external data required.
+
+name: measured
+source: measured
+num_classes: 12
+traces_per_class: 130          # paper: 130 traces/class
+seed: 20270214
+
+# `overlap` = fraction of tool-distribution mass shared by every class (higher = more
+# confusable). The paper says tasks are drawn from "overlapping class-conditional tool
+# distributions" but NEVER states the degree of overlap, and this one number moves the
+# RQ6 result more than anything else in the harness. 0.15 is the value at which our
+# harness reproduces the paper's reported platform/provider operating point; it was
+# chosen for that reason and not derived independently, which is why the
+# `overlap_sweep` stage publishes the whole mapping rather than this point alone.
+overlap: 0.15
+
+bank: [random_forest, knn]
+bootstrap: 100
+test_size: 0.4
+vantages: [network, platform, providers]
+output_dir: outputs/measured

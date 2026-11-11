@@ -1,0 +1,191 @@
+{
+  "elapsed_s": 12.690859079360962,
+  "provenance": {
+    "config": {
+      "args": {
+        "draws": 8,
+        "generator_config": "configs/default.yaml",
+        "live_per_class": 70,
+        "measured_config": "configs/measured.yaml",
+        "no_tls": false,
+        "only": "vantage,subgroup,validation,measured_multiseed,openworld,live",
+        "openworld_total": 24000,
+        "output": "e0/scale_study",
+        "quick": false,
+        "seeds": 5,
+        "skip": null,
+        "tax_sizes": [
+          8,
+          12,
+          16,
+          24
+        ],
+        "validation_per_class": 300
+      },
+      "generator": {
+        "bank": [
+          "random_forest",
+          "knn"
+        ],
+        "bootstrap": 200,
+        "data_root": null,
+        "defenses": [
+          "none",
+          "pad-512",
+          "shuffle",
+          "constant-rate",
+          "cover",
+          "pad-max",
+          "full"
+        ],
+        "name": "default",
+        "num_classes": 12,
+        "output_dir": "outputs/default",
+        "overlap": 0.5,
+        "prior": "uniform",
+        "seed": 20270214,
+        "signature_upweight": 0.9,
+        "source": "generator",
+        "test_size": 0.4,
+        "traces_per_class": 600,
+        "vantages": [
+          "network",
+          "platform",
+          "providers"
+        ]
+      },
+      "measured": {
+        "bank": [
+          "random_forest",
+          "knn"
+        ],
+        "bootstrap": 100,
+        "data_root": null,
+        "defenses": [
+          "none",
+          "pad-512",
+          "shuffle",
+          "constant-rate",
+          "cover",
+          "pad-max",
+          "full"
+        ],
+        "name": "measured",
+        "num_classes": 12,
+        "output_dir": "outputs/measured",
+        "overlap": 0.15,
+        "prior": "uniform",
+        "seed": 20270214,
+        "signature_upweight": 0.9,
+        "source": "measured",
+        "test_size": 0.4,
+        "traces_per_class": 130,
+        "vantages": [
+          "network",
+          "platform",
+          "providers"
+        ]
+      }
+    },
+    "leakbench_version": "0.1.0",
+    "note": "paper-scale study",
+    "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+    "python_version": "3.13.5",
+    "seed": 20270214,
+    "taxonomy_hash": "8ba36962dec5",
+    "taxonomy_name": "tax-v1/12c-4f"
+  },
+  "result": {
+    "note": "advantage is mean+/-std over seeds; MI and CI are at the first seed",
+    "ordering_steps": {
+      "network<platform": {
+        "holds_in_seeds": 5,
+        "mean_gap": 0.40909090909090906,
+        "min_gap": 0.3409090909090909,
+        "n_seeds": 5,
+        "p_value_one_sided": 1.9942770516706293e-05,
+        "t_statistic": 19.609244552254236
+      },
+      "platform<providers": {
+        "holds_in_seeds": 5,
+        "mean_gap": 0.2010489510489511,
+        "min_gap": 0.1678321678321678,
+        "n_seeds": 5,
+        "p_value_one_sided": 7.534185593236487e-05,
+        "t_statistic": 14.007734192605257
+      }
+    },
+    "per_seed_advantage": [
+      {
+        "network": 0.1328671328671329,
+        "platform": 0.5874125874125874,
+        "providers": 0.7902097902097902
+      },
+      {
+        "network": 0.20804195804195805,
+        "platform": 0.5979020979020978,
+        "providers": 0.8006993006993006
+      },
+      {
+        "network": 0.2115384615384615,
+        "platform": 0.6223776223776224,
+        "providers": 0.7902097902097902
+      },
+      {
+        "network": 0.18531468531468526,
+        "platform": 0.5262237762237761,
+        "providers": 0.7779720279720279
+      },
+      {
+        "network": 0.16958041958041958,
+        "platform": 0.6188811188811189,
+        "providers": 0.798951048951049
+      }
+    ],
+    "rq": "RQ6_measured_multiseed",
+    "seeds": [
+      20270214,
+      20270215,
+      20270216,
+      20270217,
+      20270218
+    ],
+    "summary": {
+      "network": {
+        "advantage_ci_at_reference_seed": [
+          0.10572552447552447,
+          0.16874999999999998
+        ],
+        "max": 0.2115384615384615,
+        "mean": 0.18146853146853145,
+        "mi_bits_at_reference_seed": 0.3673216728551124,
+        "min": 0.1328671328671329,
+        "std": 0.028735217917908173
+      },
+      "platform": {
+        "advantage_ci_at_reference_seed": [
+          0.553277972027972,
+          0.6224650349650349
+        ],
+        "max": 0.6223776223776224,
+        "mean": 0.5905594405594405,
+        "mi_bits_at_reference_seed": 2.102831642233161,
+        "min": 0.5262237762237761,
+        "std": 0.034691235677797125
+      },
+      "providers": {
+        "advantage_ci_at_reference_seed": [
+          0.7586538461538461,
+          0.827840909090909
+        ],
+        "max": 0.8006993006993006,
+        "mean": 0.7916083916083915,
+        "mi_bits_at_reference_seed": 2.5871262676052424,
+        "min": 0.7779720279720279,
+        "std": 0.008079874131672271
+      }
+    },
+    "traces_per_class": 130
+  },
+  "status": "real_computation_at_paper_scale"
+}

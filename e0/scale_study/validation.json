@@ -1,0 +1,155 @@
+{
+  "elapsed_s": 1.3332569599151611,
+  "provenance": {
+    "config": {
+      "args": {
+        "draws": 8,
+        "generator_config": "configs/default.yaml",
+        "live_per_class": 70,
+        "measured_config": "configs/measured.yaml",
+        "no_tls": false,
+        "only": "vantage,subgroup,validation,measured_multiseed,openworld,live",
+        "openworld_total": 24000,
+        "output": "e0/scale_study",
+        "quick": false,
+        "seeds": 5,
+        "skip": null,
+        "tax_sizes": [
+          8,
+          12,
+          16,
+          24
+        ],
+        "validation_per_class": 300
+      },
+      "generator": {
+        "bank": [
+          "random_forest",
+          "knn"
+        ],
+        "bootstrap": 200,
+        "data_root": null,
+        "defenses": [
+          "none",
+          "pad-512",
+          "shuffle",
+          "constant-rate",
+          "cover",
+          "pad-max",
+          "full"
+        ],
+        "name": "default",
+        "num_classes": 12,
+        "output_dir": "outputs/default",
+        "overlap": 0.5,
+        "prior": "uniform",
+        "seed": 20270214,
+        "signature_upweight": 0.9,
+        "source": "generator",
+        "test_size": 0.4,
+        "traces_per_class": 600,
+        "vantages": [
+          "network",
+          "platform",
+          "providers"
+        ]
+      },
+      "measured": {
+        "bank": [
+          "random_forest",
+          "knn"
+        ],
+        "bootstrap": 100,
+        "data_root": null,
+        "defenses": [
+          "none",
+          "pad-512",
+          "shuffle",
+          "constant-rate",
+          "cover",
+          "pad-max",
+          "full"
+        ],
+        "name": "measured",
+        "num_classes": 12,
+        "output_dir": "outputs/measured",
+        "overlap": 0.15,
+        "prior": "uniform",
+        "seed": 20270214,
+        "signature_upweight": 0.9,
+        "source": "measured",
+        "test_size": 0.4,
+        "traces_per_class": 130,
+        "vantages": [
+          "network",
+          "platform",
+          "providers"
+        ]
+      }
+    },
+    "leakbench_version": "0.1.0",
+    "note": "paper-scale study",
+    "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+    "python_version": "3.13.5",
+    "seed": 20270214,
+    "taxonomy_hash": "8ba36962dec5",
+    "taxonomy_name": "tax-v1/12c-4f"
+  },
+  "result": {
+    "K": 12,
+    "max_mi_abs_error": 0.0826199249806483,
+    "note": "estimated MI is a LOWER bound; it should track (from below) the analytic curve",
+    "rows": [
+      {
+        "analytic_bayes_risk": 0.0,
+        "analytic_mi_bits": 3.584962500721156,
+        "estimated_bayes_risk": 0.0,
+        "estimated_mi_bits": 3.584962500721156,
+        "mi_abs_error": 0.0,
+        "p": 0.0
+      },
+      {
+        "analytic_bayes_risk": 0.18333333333333324,
+        "analytic_mi_bits": 2.2634182778067244,
+        "estimated_bayes_risk": 0.18263888888888888,
+        "estimated_mi_bits": 2.3460382027873727,
+        "mi_abs_error": 0.0826199249806483,
+        "p": 0.2
+      },
+      {
+        "analytic_bayes_risk": 0.3666666666666667,
+        "analytic_mi_bits": 1.3684259969602417,
+        "estimated_bayes_risk": 0.3854166666666667,
+        "estimated_mi_bits": 1.3511767238320267,
+        "mi_abs_error": 0.017249273128215004,
+        "p": 0.4
+      },
+      {
+        "analytic_bayes_risk": 0.55,
+        "analytic_mi_bits": 0.6895006564828345,
+        "estimated_bayes_risk": 0.5736111111111111,
+        "estimated_mi_bits": 0.6793709121853433,
+        "mi_abs_error": 0.01012974429749125,
+        "p": 0.6
+      },
+      {
+        "analytic_bayes_risk": 0.7333333333333334,
+        "analytic_mi_bits": 0.21140523844597103,
+        "estimated_bayes_risk": 0.7743055555555556,
+        "estimated_mi_bits": 0.19364988565979868,
+        "mi_abs_error": 0.01775535278617235,
+        "p": 0.8
+      },
+      {
+        "analytic_bayes_risk": 0.8708333333333333,
+        "analytic_mi_bits": 0.01722580482806446,
+        "estimated_bayes_risk": 0.9006944444444445,
+        "estimated_mi_bits": 0.05480248260677431,
+        "mi_abs_error": 0.03757667777870985,
+        "p": 0.95
+      }
+    ],
+    "rq": "RQ5_validation"
+  },
+  "status": "real_computation_at_paper_scale"
+}

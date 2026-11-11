@@ -1,0 +1,162 @@
+{
+  "elapsed_s": 2.0049290657043457,
+  "provenance": {
+    "config": {
+      "args": {
+        "draws": 8,
+        "generator_config": "configs/default.yaml",
+        "live_per_class": 70,
+        "measured_config": "configs/measured.yaml",
+        "no_tls": false,
+        "only": "vantage,subgroup,validation,measured_multiseed,openworld,live",
+        "openworld_total": 24000,
+        "output": "e0/scale_study",
+        "quick": false,
+        "seeds": 5,
+        "skip": null,
+        "tax_sizes": [
+          8,
+          12,
+          16,
+          24
+        ],
+        "validation_per_class": 300
+      },
+      "generator": {
+        "bank": [
+          "random_forest",
+          "knn"
+        ],
+        "bootstrap": 200,
+        "data_root": null,
+        "defenses": [
+          "none",
+          "pad-512",
+          "shuffle",
+          "constant-rate",
+          "cover",
+          "pad-max",
+          "full"
+        ],
+        "name": "default",
+        "num_classes": 12,
+        "output_dir": "outputs/default",
+        "overlap": 0.5,
+        "prior": "uniform",
+        "seed": 20270214,
+        "signature_upweight": 0.9,
+        "source": "generator",
+        "test_size": 0.4,
+        "traces_per_class": 600,
+        "vantages": [
+          "network",
+          "platform",
+          "providers"
+        ]
+      },
+      "measured": {
+        "bank": [
+          "random_forest",
+          "knn"
+        ],
+        "bootstrap": 100,
+        "data_root": null,
+        "defenses": [
+          "none",
+          "pad-512",
+          "shuffle",
+          "constant-rate",
+          "cover",
+          "pad-max",
+          "full"
+        ],
+        "name": "measured",
+        "num_classes": 12,
+        "output_dir": "outputs/measured",
+        "overlap": 0.15,
+        "prior": "uniform",
+        "seed": 20270214,
+        "signature_upweight": 0.9,
+        "source": "measured",
+        "test_size": 0.4,
+        "traces_per_class": 130,
+        "vantages": [
+          "network",
+          "platform",
+          "providers"
+        ]
+      }
+    },
+    "leakbench_version": "0.1.0",
+    "note": "paper-scale study",
+    "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+    "python_version": "3.13.5",
+    "seed": 20270214,
+    "taxonomy_hash": "8ba36962dec5",
+    "taxonomy_name": "tax-v1/12c-4f"
+  },
+  "result": {
+    "by_family": {
+      "coding": 0.9015151515151515,
+      "ops": 0.7878787878787878,
+      "personal": 0.9545454545454546,
+      "research": 0.8545454545454546
+    },
+    "by_family_mi_bits": {
+      "coding": 1.1270352906005103,
+      "ops": 0.9462607073103839,
+      "personal": 1.3611698044578282,
+      "research": 0.9829737571758683
+    },
+    "by_length_band": {
+      "long": 0.8830640187492291,
+      "short": 0.865770076296392
+    },
+    "by_length_band_mi_bits": {
+      "long": 2.848311390124656,
+      "short": 2.735567277574178
+    },
+    "note": "aggregate leakage hides subgroups that leak more (disparate vulnerability). 'by_family' = how the full 12-way task fares within each family's traces; 'within_family_discrimination' = the k-way task restricted to one family (the paper's family rows).",
+    "overall_advantage": 0.8746212121212121,
+    "rq": "RQ3_subgroup",
+    "within_family_discrimination": {
+      "coding": {
+        "advantage": 0.8729166666666667,
+        "advantage_ci": [
+          0.8426562500000001,
+          0.8980208333333334
+        ],
+        "mi_bits": 1.1353620696940998,
+        "num_classes": 3
+      },
+      "ops": {
+        "advantage": 0.7291666666666666,
+        "advantage_ci": [
+          0.6884895833333334,
+          0.76875
+        ],
+        "mi_bits": 0.9171882827353717,
+        "num_classes": 3
+      },
+      "personal": {
+        "advantage": 0.9541666666666667,
+        "advantage_ci": [
+          0.9384895833333334,
+          0.975
+        ],
+        "mi_bits": 1.3728349160375906,
+        "num_classes": 3
+      },
+      "research": {
+        "advantage": 0.8083333333333333,
+        "advantage_ci": [
+          0.7770833333333333,
+          0.8365104166666666
+        ],
+        "mi_bits": 0.9524835329886291,
+        "num_classes": 3
+      }
+    }
+  },
+  "status": "real_computation_at_paper_scale"
+}

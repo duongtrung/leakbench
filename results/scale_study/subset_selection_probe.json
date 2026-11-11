@@ -1,0 +1,74 @@
+{
+  "status": "real_computation_at_paper_scale",
+  "result": {
+    "rq": "subset_selection_probe",
+    "rows": {
+      "generator_network": {
+        "full": 0.6442424242424242,
+        "best_subset": 0.6442424242424242,
+        "gain": 0.0,
+        "selected_blocks": [
+          "volume",
+          "size_hist",
+          "timing_hist",
+          "size_stats",
+          "timing_stats"
+        ],
+        "selected_attacker": "random_forest"
+      },
+      "generator_platform": {
+        "full": 0.8666666666666667,
+        "best_subset": 0.873939393939394,
+        "gain": 0.0072727272727273196,
+        "selected_blocks": [
+          "length",
+          "unigram",
+          "timing_hist"
+        ],
+        "selected_attacker": "random_forest"
+      },
+      "measured_network": {
+        "full": 0.14405594405594405,
+        "best_subset": 0.15804195804195798,
+        "gain": 0.013986013986013929,
+        "selected_blocks": [
+          "size_hist",
+          "timing_hist",
+          "size_stats",
+          "timing_stats"
+        ],
+        "selected_attacker": "random_forest"
+      },
+      "measured_platform": {
+        "full": 0.5776223776223776,
+        "best_subset": 0.5972027972027971,
+        "gain": 0.01958041958041956,
+        "selected_blocks": [
+          "unigram",
+          "bigram",
+          "timing_hist"
+        ],
+        "selected_attacker": "random_forest"
+      }
+    },
+    "mean_gain": 0.010209790209790202,
+    "protocol": "select on validation split, score on held-out test split",
+    "conclusion": "no consistent gain; the estimator is unchanged"
+  },
+  "provenance": {
+    "leakbench_version": "0.1.0",
+    "python_version": "3.14.7",
+    "platform": "macOS-26.5-arm64-arm-64bit-Mach-O",
+    "seed": 20270214,
+    "taxonomy_hash": "8ba36962dec5",
+    "taxonomy_name": "tax-v1/12c-4f",
+    "config": {
+      "split": "50/25/25 train/validation/test",
+      "traces_per_class": {
+        "generator": 600,
+        "measured": 130
+      }
+    },
+    "note": "does maximizing over feature-block subsets tighten the bound?"
+  }
+}

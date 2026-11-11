@@ -1,0 +1,166 @@
+{
+  "elapsed_s": 24.42579436302185,
+  "provenance": {
+    "config": {
+      "args": {
+        "draws": 8,
+        "generator_config": "configs/default.yaml",
+        "live_per_class": 70,
+        "measured_config": "configs/measured.yaml",
+        "no_tls": false,
+        "only": null,
+        "openworld_total": 24000,
+        "output": "outputs/scale_study",
+        "quick": false,
+        "seeds": 5,
+        "skip": null,
+        "tax_sizes": [
+          8,
+          12,
+          16,
+          24
+        ],
+        "validation_per_class": 300
+      },
+      "generator": {
+        "bank": [
+          "random_forest",
+          "knn"
+        ],
+        "bootstrap": 200,
+        "data_root": null,
+        "defenses": [
+          "none",
+          "pad-512",
+          "shuffle",
+          "constant-rate",
+          "cover",
+          "pad-max",
+          "full"
+        ],
+        "name": "default",
+        "num_classes": 12,
+        "output_dir": "outputs/default",
+        "overlap": 0.5,
+        "prior": "uniform",
+        "seed": 20270214,
+        "signature_upweight": 0.9,
+        "source": "generator",
+        "test_size": 0.4,
+        "traces_per_class": 600,
+        "vantages": [
+          "network",
+          "platform",
+          "providers"
+        ]
+      },
+      "measured": {
+        "bank": [
+          "random_forest",
+          "knn"
+        ],
+        "bootstrap": 100,
+        "data_root": null,
+        "defenses": [
+          "none",
+          "pad-512",
+          "shuffle",
+          "constant-rate",
+          "cover",
+          "pad-max",
+          "full"
+        ],
+        "name": "measured",
+        "num_classes": 12,
+        "output_dir": "outputs/measured",
+        "overlap": 0.15,
+        "prior": "uniform",
+        "seed": 20270214,
+        "signature_upweight": 0.9,
+        "source": "measured",
+        "test_size": 0.4,
+        "traces_per_class": 130,
+        "vantages": [
+          "network",
+          "platform",
+          "providers"
+        ]
+      }
+    },
+    "leakbench_version": "0.1.0",
+    "note": "paper-scale study",
+    "platform": "Linux-7.0.0-1006-aws-x86_64-with-glibc2.43",
+    "python_version": "3.14.4",
+    "seed": 20270214,
+    "taxonomy_hash": "8ba36962dec5",
+    "taxonomy_name": "tax-v1/12c-4f"
+  },
+  "result": {
+    "n_draws": 8,
+    "note": "spread across independent Dirichlet profile draws, which the bootstrap CI does not cover",
+    "per_draw": [
+      {
+        "network": 0.5750000000000001,
+        "platform": 0.8465909090909091,
+        "providers": 0.9541666666666666
+      },
+      {
+        "network": 0.6973484848484849,
+        "platform": 0.8496212121212121,
+        "providers": 0.9704545454545455
+      },
+      {
+        "network": 0.6969696969696969,
+        "platform": 0.8886363636363637,
+        "providers": 0.9731060606060606
+      },
+      {
+        "network": 0.6522727272727273,
+        "platform": 0.8734848484848484,
+        "providers": 0.978030303030303
+      },
+      {
+        "network": 0.6749999999999999,
+        "platform": 0.8803030303030304,
+        "providers": 0.9696969696969697
+      },
+      {
+        "network": 0.7132575757575758,
+        "platform": 0.8928030303030302,
+        "providers": 0.981060606060606
+      },
+      {
+        "network": 0.6662878787878788,
+        "platform": 0.9034090909090909,
+        "providers": 0.9738636363636364
+      },
+      {
+        "network": 0.6079545454545454,
+        "platform": 0.8613636363636363,
+        "providers": 0.9674242424242424
+      }
+    ],
+    "rq": "generator_draw_variance",
+    "summary": {
+      "network": {
+        "max": 0.7132575757575758,
+        "mean": 0.6605113636363635,
+        "min": 0.5750000000000001,
+        "std": 0.044516742286230856
+      },
+      "platform": {
+        "max": 0.9034090909090909,
+        "mean": 0.8745265151515151,
+        "min": 0.8465909090909091,
+        "std": 0.019286357848457805
+      },
+      "providers": {
+        "max": 0.981060606060606,
+        "mean": 0.9709753787878788,
+        "min": 0.9541666666666666,
+        "std": 0.007594525757535104
+      }
+    }
+  },
+  "status": "real_computation_at_paper_scale"
+}

@@ -1,0 +1,101 @@
+{
+  "provenance": {
+    "config": {
+      "bank": [
+        "random_forest",
+        "knn"
+      ],
+      "bootstrap": 50,
+      "data_root": null,
+      "defenses": [
+        "none",
+        "pad-512",
+        "shuffle",
+        "constant-rate",
+        "cover",
+        "pad-max",
+        "full"
+      ],
+      "name": "synthetic_demo",
+      "num_classes": 12,
+      "output_dir": "outputs/synthetic_demo",
+      "overlap": 0.5,
+      "prior": "uniform",
+      "seed": 20270214,
+      "signature_upweight": 0.9,
+      "source": "generator",
+      "test_size": 0.4,
+      "traces_per_class": 40,
+      "vantages": [
+        "network",
+        "platform",
+        "providers"
+      ]
+    },
+    "leakbench_version": "0.1.0",
+    "note": "synthetic smoke-test output, not a paper result",
+    "platform": "Linux-6.18.5-fc-v18-x86_64-with-glibc2.39",
+    "python_version": "3.11.15",
+    "seed": 20270214,
+    "taxonomy_hash": "8ba36962dec5",
+    "taxonomy_name": "tax-v1/12c-4f"
+  },
+  "result": {
+    "note": "only size padding neutralizes the channel, at order-of-magnitude cost",
+    "rows": [
+      {
+        "advantage": 0.5681818181818181,
+        "bandwidth_overhead": 0.0,
+        "defense": "none",
+        "latency_overhead": 0.0,
+        "mi_bits": 2.0229868220790728
+      },
+      {
+        "advantage": 0.6022727272727272,
+        "bandwidth_overhead": 0.21398953032256765,
+        "defense": "pad-512",
+        "latency_overhead": 0.0,
+        "mi_bits": 2.099618888320566
+      },
+      {
+        "advantage": 0.5681818181818181,
+        "bandwidth_overhead": 0.0,
+        "defense": "shuffle",
+        "latency_overhead": 0.0,
+        "mi_bits": 2.0229868220790728
+      },
+      {
+        "advantage": 0.5454545454545454,
+        "bandwidth_overhead": 0.0,
+        "defense": "constant-rate",
+        "latency_overhead": 0.0,
+        "mi_bits": 2.0607055070843634
+      },
+      {
+        "advantage": 0.5284090909090908,
+        "bandwidth_overhead": 0.9220002676293008,
+        "defense": "cover",
+        "latency_overhead": 0.9205875763736862,
+        "mi_bits": 1.9116470787075712
+      },
+      {
+        "advantage": 0.3181818181818182,
+        "bandwidth_overhead": 41.75610409436859,
+        "defense": "pad-max",
+        "latency_overhead": 0.0,
+        "mi_bits": 1.4797721409469404
+      },
+      {
+        "advantage": 0.19886363636363633,
+        "bandwidth_overhead": 81.13321080579681,
+        "defense": "full",
+        "latency_overhead": 1.0117813358403576,
+        "mi_bits": 1.0791476228111814
+      }
+    ],
+    "rq": "RQ4_defenses",
+    "vantage": "network"
+  },
+  "status": "synthetic smoke-test output, not a paper result",
+  "warning": "These numbers are from the calibrated generator, not a deployed system. Do not cite as paper results."
+}

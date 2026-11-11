@@ -1,0 +1,60 @@
+{
+  "provenance": {
+    "config": {
+      "bank": [
+        "random_forest",
+        "knn"
+      ],
+      "bootstrap": 50,
+      "data_root": null,
+      "defenses": [
+        "none",
+        "pad-512",
+        "shuffle",
+        "constant-rate",
+        "cover",
+        "pad-max",
+        "full"
+      ],
+      "name": "synthetic_demo",
+      "num_classes": 12,
+      "output_dir": "outputs/synthetic_demo",
+      "overlap": 0.5,
+      "prior": "uniform",
+      "seed": 20270214,
+      "signature_upweight": 0.9,
+      "source": "generator",
+      "test_size": 0.4,
+      "traces_per_class": 40,
+      "vantages": [
+        "network",
+        "platform",
+        "providers"
+      ]
+    },
+    "leakbench_version": "0.1.0",
+    "note": "synthetic smoke-test output, not a paper result",
+    "platform": "Linux-6.18.5-fc-v18-x86_64-with-glibc2.39",
+    "python_version": "3.11.15",
+    "seed": 20270214,
+    "taxonomy_hash": "8ba36962dec5",
+    "taxonomy_name": "tax-v1/12c-4f"
+  },
+  "result": {
+    "by_family": {
+      "coding": 0.8636363636363636,
+      "ops": 0.7954545454545454,
+      "personal": 0.9545454545454546,
+      "research": 0.7954545454545454
+    },
+    "by_length_band": {
+      "long": 0.8636363636363636,
+      "short": 0.8426573426573426
+    },
+    "note": "aggregate leakage hides subgroups that leak more (disparate vulnerability)",
+    "overall_advantage": 0.8522727272727273,
+    "rq": "RQ3_subgroup"
+  },
+  "status": "synthetic smoke-test output, not a paper result",
+  "warning": "These numbers are from the calibrated generator, not a deployed system. Do not cite as paper results."
+}

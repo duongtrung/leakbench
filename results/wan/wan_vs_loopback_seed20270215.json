@@ -1,0 +1,82 @@
+{
+  "status": "live_captured_traffic_over_wan",
+  "result": {
+    "rq": "RQ8_wan_vs_loopback",
+    "seed": 20270215,
+    "traces_per_class": 70,
+    "conditions": {
+      "loopback": {
+        "n_traces": 420,
+        "median_gap_s": 0.0003142500063404441,
+        "vantages": {
+          "network": {
+            "advantage": 0.42142857142857143,
+            "mi_bits": 0.8604130499739199
+          },
+          "platform": {
+            "advantage": 0.8071428571428572,
+            "mi_bits": 2.1898186621107096
+          },
+          "providers": {
+            "advantage": 0.7928571428571429,
+            "mi_bits": 2.0445643606860338
+          }
+        },
+        "platform_without_timing_hist": {
+          "advantage": 0.8142857142857143,
+          "mi_bits": 2.1914136876017545
+        },
+        "platform_timing_hist_only": {
+          "advantage": 0.0,
+          "mi_bits": 3.2034265038149176e-16
+        }
+      },
+      "wan": {
+        "n_traces": 420,
+        "median_gap_s": 0.2452473749872297,
+        "vantages": {
+          "network": {
+            "advantage": 0.37857142857142856,
+            "mi_bits": 0.9091683484875782
+          },
+          "platform": {
+            "advantage": 0.8214285714285714,
+            "mi_bits": 2.186544198723963
+          },
+          "providers": {
+            "advantage": 0.8142857142857143,
+            "mi_bits": 2.217072932366579
+          }
+        },
+        "platform_without_timing_hist": {
+          "advantage": 0.7857142857142857,
+          "mi_bits": 2.176624524229236
+        },
+        "platform_timing_hist_only": {
+          "advantage": 0.04285714285714284,
+          "mi_bits": 0.11588337703234597
+        }
+      }
+    },
+    "verdict": {
+      "platform_gain_from_wan": 0.014285714285714235,
+      "platform_gain_without_timing_hist": -0.02857142857142858,
+      "gap_ratio_wan_over_loopback": 780.4212252633654,
+      "timing_hist_explains_the_gain": true
+    }
+  },
+  "provenance": {
+    "leakbench_version": "0.1.0",
+    "python_version": "3.14.7",
+    "platform": "macOS-26.5-arm64-arm-64bit-Mach-O",
+    "seed": 20270215,
+    "taxonomy_hash": "live",
+    "taxonomy_name": "live/6c",
+    "config": {
+      "traces_per_class": 70,
+      "server_port": 18443
+    },
+    "note": "paired loopback/WAN capture, second WAN seed; client and capture proxy on this host, tool server in AWS us-east-1 reached through an SSH tunnel",
+    "added_after_the_run": "the scripts did not emit a provenance block at the time of this run and now do; host and interpreter recorded here are this machine's, which is the machine that ran it"
+  }
+}

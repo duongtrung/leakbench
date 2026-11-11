@@ -1,0 +1,239 @@
+{
+  "status": "real_computation_at_paper_scale",
+  "result": {
+    "rq": "RQ5_validation_sample_scaling",
+    "seed": 20270214,
+    "K": 12,
+    "rows": [
+      {
+        "n_per_class": 300,
+        "n_total": 3600,
+        "max_mi_abs_error": 0.0826199249806483,
+        "rows": [
+          {
+            "p": 0.0,
+            "analytic_mi_bits": 3.584962500721156,
+            "estimated_mi_bits": 3.584962500721156,
+            "analytic_bayes_risk": 0.0,
+            "estimated_bayes_risk": 0.0,
+            "mi_abs_error": 0.0
+          },
+          {
+            "p": 0.2,
+            "analytic_mi_bits": 2.2634182778067244,
+            "estimated_mi_bits": 2.3460382027873727,
+            "analytic_bayes_risk": 0.18333333333333324,
+            "estimated_bayes_risk": 0.18263888888888888,
+            "mi_abs_error": 0.0826199249806483
+          },
+          {
+            "p": 0.4,
+            "analytic_mi_bits": 1.3684259969602417,
+            "estimated_mi_bits": 1.3511767238320267,
+            "analytic_bayes_risk": 0.3666666666666667,
+            "estimated_bayes_risk": 0.3854166666666667,
+            "mi_abs_error": 0.017249273128215004
+          },
+          {
+            "p": 0.6,
+            "analytic_mi_bits": 0.6895006564828345,
+            "estimated_mi_bits": 0.6793709121853433,
+            "analytic_bayes_risk": 0.55,
+            "estimated_bayes_risk": 0.5736111111111111,
+            "mi_abs_error": 0.01012974429749125
+          },
+          {
+            "p": 0.8,
+            "analytic_mi_bits": 0.21140523844597103,
+            "estimated_mi_bits": 0.19364988565979868,
+            "analytic_bayes_risk": 0.7333333333333334,
+            "estimated_bayes_risk": 0.7743055555555556,
+            "mi_abs_error": 0.01775535278617235
+          },
+          {
+            "p": 0.95,
+            "analytic_mi_bits": 0.01722580482806446,
+            "estimated_mi_bits": 0.05480248260677431,
+            "analytic_bayes_risk": 0.8708333333333333,
+            "estimated_bayes_risk": 0.9006944444444445,
+            "mi_abs_error": 0.03757667777870985
+          }
+        ]
+      },
+      {
+        "n_per_class": 1000,
+        "n_total": 12000,
+        "max_mi_abs_error": 0.035944316567745715,
+        "rows": [
+          {
+            "p": 0.0,
+            "analytic_mi_bits": 3.584962500721156,
+            "estimated_mi_bits": 3.584962500721156,
+            "analytic_bayes_risk": 0.0,
+            "estimated_bayes_risk": 0.0,
+            "mi_abs_error": 0.0
+          },
+          {
+            "p": 0.2,
+            "analytic_mi_bits": 2.2634182778067244,
+            "estimated_mi_bits": 2.255700077994245,
+            "analytic_bayes_risk": 0.18333333333333324,
+            "estimated_bayes_risk": 0.18770833333333334,
+            "mi_abs_error": 0.007718199812479565
+          },
+          {
+            "p": 0.4,
+            "analytic_mi_bits": 1.3684259969602417,
+            "estimated_mi_bits": 1.3921707436642483,
+            "analytic_bayes_risk": 0.3666666666666667,
+            "estimated_bayes_risk": 0.36520833333333336,
+            "mi_abs_error": 0.023744746704006614
+          },
+          {
+            "p": 0.6,
+            "analytic_mi_bits": 0.6895006564828345,
+            "estimated_mi_bits": 0.6709250700491676,
+            "analytic_bayes_risk": 0.55,
+            "estimated_bayes_risk": 0.5604166666666667,
+            "mi_abs_error": 0.01857558643366697
+          },
+          {
+            "p": 0.8,
+            "analytic_mi_bits": 0.21140523844597103,
+            "estimated_mi_bits": 0.17546092187822532,
+            "analytic_bayes_risk": 0.7333333333333334,
+            "estimated_bayes_risk": 0.7608333333333334,
+            "mi_abs_error": 0.035944316567745715
+          },
+          {
+            "p": 0.95,
+            "analytic_mi_bits": 0.01722580482806446,
+            "estimated_mi_bits": 0.019010648565934117,
+            "analytic_bayes_risk": 0.8708333333333333,
+            "estimated_bayes_risk": 0.9039583333333333,
+            "mi_abs_error": 0.0017848437378696555
+          }
+        ]
+      },
+      {
+        "n_per_class": 3000,
+        "n_total": 36000,
+        "max_mi_abs_error": 0.017478272290049723,
+        "rows": [
+          {
+            "p": 0.0,
+            "analytic_mi_bits": 3.584962500721156,
+            "estimated_mi_bits": 3.584962500721156,
+            "analytic_bayes_risk": 0.0,
+            "estimated_bayes_risk": 0.0,
+            "mi_abs_error": 0.0
+          },
+          {
+            "p": 0.2,
+            "analytic_mi_bits": 2.2634182778067244,
+            "estimated_mi_bits": 2.267890124747697,
+            "analytic_bayes_risk": 0.18333333333333324,
+            "estimated_bayes_risk": 0.18333333333333332,
+            "mi_abs_error": 0.004471846940972579
+          },
+          {
+            "p": 0.4,
+            "analytic_mi_bits": 1.3684259969602417,
+            "estimated_mi_bits": 1.350947724670192,
+            "analytic_bayes_risk": 0.3666666666666667,
+            "estimated_bayes_risk": 0.3721527777777778,
+            "mi_abs_error": 0.017478272290049723
+          },
+          {
+            "p": 0.6,
+            "analytic_mi_bits": 0.6895006564828345,
+            "estimated_mi_bits": 0.6942443694368589,
+            "analytic_bayes_risk": 0.55,
+            "estimated_bayes_risk": 0.5499305555555556,
+            "mi_abs_error": 0.004743712954024315
+          },
+          {
+            "p": 0.8,
+            "analytic_mi_bits": 0.21140523844597103,
+            "estimated_mi_bits": 0.19713145362300524,
+            "analytic_bayes_risk": 0.7333333333333334,
+            "estimated_bayes_risk": 0.7436805555555556,
+            "mi_abs_error": 0.01427378482296579
+          },
+          {
+            "p": 0.95,
+            "analytic_mi_bits": 0.01722580482806446,
+            "estimated_mi_bits": 0.007644285719717498,
+            "analytic_bayes_risk": 0.8708333333333333,
+            "estimated_bayes_risk": 0.9007638888888889,
+            "mi_abs_error": 0.009581519108346963
+          }
+        ]
+      },
+      {
+        "n_per_class": 8000,
+        "n_total": 96000,
+        "max_mi_abs_error": 0.011918106848211974,
+        "rows": [
+          {
+            "p": 0.0,
+            "analytic_mi_bits": 3.584962500721156,
+            "estimated_mi_bits": 3.584962500721156,
+            "analytic_bayes_risk": 0.0,
+            "estimated_bayes_risk": 0.0,
+            "mi_abs_error": 0.0
+          },
+          {
+            "p": 0.2,
+            "analytic_mi_bits": 2.2634182778067244,
+            "estimated_mi_bits": 2.2651457049247012,
+            "analytic_bayes_risk": 0.18333333333333324,
+            "estimated_bayes_risk": 0.18338541666666666,
+            "mi_abs_error": 0.0017274271179767986
+          },
+          {
+            "p": 0.4,
+            "analytic_mi_bits": 1.3684259969602417,
+            "estimated_mi_bits": 1.3602709624183356,
+            "analytic_bayes_risk": 0.3666666666666667,
+            "estimated_bayes_risk": 0.36895833333333333,
+            "mi_abs_error": 0.008155034541906137
+          },
+          {
+            "p": 0.6,
+            "analytic_mi_bits": 0.6895006564828345,
+            "estimated_mi_bits": 0.6919677974819474,
+            "analytic_bayes_risk": 0.55,
+            "estimated_bayes_risk": 0.549921875,
+            "mi_abs_error": 0.002467140999112827
+          },
+          {
+            "p": 0.8,
+            "analytic_mi_bits": 0.21140523844597103,
+            "estimated_mi_bits": 0.20993187701896288,
+            "analytic_bayes_risk": 0.7333333333333334,
+            "estimated_bayes_risk": 0.7352864583333333,
+            "mi_abs_error": 0.0014733614270081574
+          },
+          {
+            "p": 0.95,
+            "analytic_mi_bits": 0.01722580482806446,
+            "estimated_mi_bits": 0.0053076979798524875,
+            "analytic_bayes_risk": 0.8708333333333333,
+            "estimated_bayes_risk": 0.8985677083333333,
+            "mi_abs_error": 0.011918106848211974
+          }
+        ]
+      }
+    ],
+    "note": "plug-in MI bias is O((K-1)^2 / (2 N ln 2)), which alone decays as 1/N; the reported max over crossover points also absorbs sampling noise, which decays as 1/sqrt(N), so the observed exponent (-0.60 on a log-log fit) sits between the two"
+  },
+  "provenance": {
+    "leakbench_version": "0.1.0",
+    "python_version": "3.14.7",
+    "platform": "macOS-26.5-arm64-arm-64bit-Mach-O",
+    "seed": 20270214,
+    "elapsed_s": 344.5862090587616,
+    "note": "run after the SymmetricChannel.sample fix; the pre-fix numbers were 0.208 / 0.193 / 0.156 / 0.148 and are not comparable"
+  }
+}

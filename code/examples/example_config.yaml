@@ -1,0 +1,16 @@
+# Minimal example config for a fast LeakBench run on the calibrated generator.
+# Produces synthetic (non-paper) results.
+
+name: example
+source: generator
+num_classes: 12
+traces_per_class: 30
+seed: 20270214
+signature_upweight: 0.9
+bank: [random_forest, knn]
+bootstrap: 30
+test_size: 0.4
+vantages: [network, platform, providers]
+defenses: [none, pad-max, full]
+prior: uniform
+output_dir: outputs/example

@@ -1,0 +1,47 @@
+{
+  "status": "real_computation_at_paper_scale",
+  "result": {
+    "rq": "bigram_block_ablation",
+    "vantage": "platform",
+    "rows": {
+      "generator": {
+        "full": 0.8746212121212121,
+        "no_bigram": 0.8746212121212121,
+        "delta": 0.0,
+        "n_features_full": 80,
+        "n_features_dropped": 16
+      },
+      "measured": {
+        "full": 0.5874125874125874,
+        "no_bigram": 0.5786713286713285,
+        "delta": -0.008741258741258862,
+        "n_features_full": 80,
+        "n_features_dropped": 16
+      },
+      "live": {
+        "full": 0.7857142857142857,
+        "no_bigram": 0.7928571428571429,
+        "delta": 0.0071428571428572285,
+        "n_features_full": 80,
+        "n_features_dropped": 16
+      }
+    },
+    "note": "delta < 0 means dropping the block LOSES leakage, i.e. the block is carrying signal a lower-bound estimator needs"
+  },
+  "provenance": {
+    "leakbench_version": "0.1.0",
+    "python_version": "3.14.7",
+    "platform": "macOS-26.5-arm64-arm-64bit-Mach-O",
+    "seed": 20270214,
+    "taxonomy_hash": "8ba36962dec5",
+    "taxonomy_name": "tax-v1/12c-4f",
+    "config": {
+      "traces_per_class": {
+        "generator": 600,
+        "measured": 130,
+        "live": 70
+      }
+    },
+    "note": "platform-vantage ablation of the 8x8 bigram transition block"
+  }
+}

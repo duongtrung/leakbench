@@ -1,0 +1,155 @@
+{
+  "elapsed_s": 20.731621503829956,
+  "provenance": {
+    "config": {
+      "args": {
+        "draws": 8,
+        "generator_config": "configs/default.yaml",
+        "live_per_class": 70,
+        "measured_config": "configs/measured.yaml",
+        "no_tls": false,
+        "only": null,
+        "openworld_total": 24000,
+        "output": "outputs/scale_study",
+        "quick": false,
+        "seeds": 5,
+        "skip": null,
+        "tax_sizes": [
+          8,
+          12,
+          16,
+          24
+        ],
+        "validation_per_class": 300
+      },
+      "generator": {
+        "bank": [
+          "random_forest",
+          "knn"
+        ],
+        "bootstrap": 200,
+        "data_root": null,
+        "defenses": [
+          "none",
+          "pad-512",
+          "shuffle",
+          "constant-rate",
+          "cover",
+          "pad-max",
+          "full"
+        ],
+        "name": "default",
+        "num_classes": 12,
+        "output_dir": "outputs/default",
+        "overlap": 0.5,
+        "prior": "uniform",
+        "seed": 20270214,
+        "signature_upweight": 0.9,
+        "source": "generator",
+        "test_size": 0.4,
+        "traces_per_class": 600,
+        "vantages": [
+          "network",
+          "platform",
+          "providers"
+        ]
+      },
+      "measured": {
+        "bank": [
+          "random_forest",
+          "knn"
+        ],
+        "bootstrap": 100,
+        "data_root": null,
+        "defenses": [
+          "none",
+          "pad-512",
+          "shuffle",
+          "constant-rate",
+          "cover",
+          "pad-max",
+          "full"
+        ],
+        "name": "measured",
+        "num_classes": 12,
+        "output_dir": "outputs/measured",
+        "overlap": 0.15,
+        "prior": "uniform",
+        "seed": 20270214,
+        "signature_upweight": 0.9,
+        "source": "measured",
+        "test_size": 0.4,
+        "traces_per_class": 130,
+        "vantages": [
+          "network",
+          "platform",
+          "providers"
+        ]
+      }
+    },
+    "leakbench_version": "0.1.0",
+    "note": "paper-scale study",
+    "platform": "Linux-7.0.0-1006-aws-x86_64-with-glibc2.43",
+    "python_version": "3.14.4",
+    "seed": 20270214,
+    "taxonomy_hash": "8ba36962dec5",
+    "taxonomy_name": "tax-v1/12c-4f"
+  },
+  "result": {
+    "note": "overlap is not specified in the paper and dominates the RQ6 operating point; network_pre_wire isolates how much of the network number the HTTP/2 wire model removes",
+    "rows": [
+      {
+        "fraction_below_one_mtu": 0.2958847506840136,
+        "network": 0.22552447552447547,
+        "network_pre_wire": 0.5699300699300699,
+        "overlap": 0.0,
+        "payload_median_bytes": 2806.0,
+        "payload_p90_bytes": 6072.4000000000015,
+        "platform": 0.7167832167832167,
+        "providers": 0.8671328671328671
+      },
+      {
+        "fraction_below_one_mtu": 0.3017669026252717,
+        "network": 0.159090909090909,
+        "network_pre_wire": 0.4248251748251748,
+        "overlap": 0.15,
+        "payload_median_bytes": 2772.0,
+        "payload_p90_bytes": 6026.0,
+        "platform": 0.5821678321678321,
+        "providers": 0.7937062937062938
+      },
+      {
+        "fraction_below_one_mtu": 0.30096488275552563,
+        "network": 0.15209790209790205,
+        "network_pre_wire": 0.38986013986013984,
+        "overlap": 0.3,
+        "payload_median_bytes": 2738.5,
+        "payload_p90_bytes": 5963.5,
+        "platform": 0.486013986013986,
+        "providers": 0.7185314685314684
+      },
+      {
+        "fraction_below_one_mtu": 0.30938825630721145,
+        "network": 0.09440559440559432,
+        "network_pre_wire": 0.29720279720279713,
+        "overlap": 0.5,
+        "payload_median_bytes": 2729.5,
+        "payload_p90_bytes": 6031.0,
+        "platform": 0.29545454545454536,
+        "providers": 0.6066433566433567
+      },
+      {
+        "fraction_below_one_mtu": 0.3120555462231928,
+        "network": 0.07517482517482516,
+        "network_pre_wire": 0.24999999999999997,
+        "overlap": 0.7,
+        "payload_median_bytes": 2684.0,
+        "payload_p90_bytes": 6020.600000000002,
+        "platform": 0.11888111888111882,
+        "providers": 0.47902097902097895
+      }
+    ],
+    "rq": "RQ6_overlap_sensitivity"
+  },
+  "status": "real_computation_at_paper_scale"
+}

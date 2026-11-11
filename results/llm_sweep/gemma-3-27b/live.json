@@ -1,0 +1,116 @@
+{
+  "gaps": [
+    "loopback not WAN"
+  ],
+  "provenance": {
+    "config": {
+      "seeds": 1,
+      "server_host": null,
+      "server_port": null,
+      "traces_per_class": 25,
+      "use_tls": true
+    },
+    "leakbench_version": "0.1.0",
+    "note": "",
+    "platform": "macOS-26.5-arm64-arm-64bit-Mach-O",
+    "python_version": "3.14.7",
+    "seed": 20270214,
+    "taxonomy_hash": "8ba36962dec5",
+    "taxonomy_name": "tax-v1/12c-4f"
+  },
+  "result": {
+    "capture_mode": "tls_captured_proxy",
+    "classes": [
+      "literature_review",
+      "trip_planning",
+      "debug_failing_test",
+      "status_reporting",
+      "market_scan",
+      "meeting_scheduling"
+    ],
+    "entropy_bits": 2.584962500721156,
+    "gaps": [
+      "loopback not WAN"
+    ],
+    "link": "loopback",
+    "llm": {
+      "base_url": "https://openrouter.ai/api/v1",
+      "calls": 1728,
+      "completion_tokens": 27877,
+      "model": "google/gemma-3-27b-it",
+      "prompt_tokens": 408746,
+      "provider": "openrouter"
+    },
+    "net_below_platform_in_seeds": 1,
+    "note": "network sizes are CAPTURED off the proxy socket, not modeled; remaining gaps are recorded in the capture metadata",
+    "per_seed": [
+      {
+        "capture": {
+          "capture": "captured_at_tcp_proxy",
+          "capture_mode": "tls_captured_proxy",
+          "classes": [
+            "literature_review",
+            "trip_planning",
+            "debug_failing_test",
+            "status_reporting",
+            "market_scan",
+            "meeting_scheduling"
+          ],
+          "gaps": [
+            "loopback not WAN"
+          ],
+          "link": "loopback",
+          "link_note": "client, proxy and server share one host",
+          "mean_handshake_bytes": 4000.0666666666666,
+          "planner": "LLMPlanner",
+          "planner_kind": "neural_llm",
+          "seed": 20270214,
+          "server": "in-process (loopback)",
+          "tls": "real",
+          "tls_generator": "openssl",
+          "traces_per_class": 25
+        },
+        "mean_trace_length": 11.393333333333333,
+        "n_traces": 150,
+        "projections": {
+          "size_only": 0.36000000000000004,
+          "timing_only": 0.1200000000000001
+        },
+        "seed": 20270214,
+        "vantages": {
+          "network": {
+            "advantage": 0.44,
+            "advantage_ci": [
+              0.2800000000000001,
+              0.6
+            ],
+            "mi_bits": 1.1902607064096964
+          },
+          "platform": {
+            "advantage": 0.5800000000000001,
+            "advantage_ci": [
+              0.4,
+              0.7609999999999997
+            ],
+            "mi_bits": 1.5268967764650887
+          },
+          "providers": {
+            "advantage": 0.54,
+            "advantage_ci": [
+              0.3695,
+              0.7000000000000001
+            ],
+            "mi_bits": 1.381607365374308
+          }
+        }
+      }
+    ],
+    "planner_kind": "neural_llm",
+    "rq": "RQ8_live",
+    "seeds": [
+      20270214
+    ],
+    "traces_per_class": 25
+  },
+  "status": "live_captured_traffic (tls_captured_proxy)"
+}

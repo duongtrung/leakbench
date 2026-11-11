@@ -1,0 +1,239 @@
+{
+  "meta": {
+    "elapsed_s": 27.609797954559326,
+    "failed_stages": {},
+    "generator_traces_per_class": 600,
+    "live_traces_per_class": 70,
+    "measured_traces_per_class": 130,
+    "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+    "quick": false,
+    "seed": 20270214,
+    "seeds": 5,
+    "stage_timings_s": {
+      "live": 4.2091310024261475,
+      "measured_multiseed": 12.690859079360962,
+      "openworld": 5.73329496383667,
+      "subgroup": 2.0049290657043457,
+      "validation": 1.3332569599151611,
+      "vantage": 1.6199119091033936
+    },
+    "started_utc": "2026-11-08T09:09:52Z",
+    "taxonomy_hash": "8ba36962dec5",
+    "taxonomy_name": "tax-v1/12c-4f"
+  },
+  "provenance": {
+    "config": {
+      "args": {
+        "draws": 8,
+        "generator_config": "configs/default.yaml",
+        "live_per_class": 70,
+        "measured_config": "configs/measured.yaml",
+        "no_tls": false,
+        "only": "vantage,subgroup,validation,measured_multiseed,openworld,live",
+        "openworld_total": 24000,
+        "output": "e0/scale_study",
+        "quick": false,
+        "seeds": 5,
+        "skip": null,
+        "tax_sizes": [
+          8,
+          12,
+          16,
+          24
+        ],
+        "validation_per_class": 300
+      },
+      "generator": {
+        "bank": [
+          "random_forest",
+          "knn"
+        ],
+        "bootstrap": 200,
+        "data_root": null,
+        "defenses": [
+          "none",
+          "pad-512",
+          "shuffle",
+          "constant-rate",
+          "cover",
+          "pad-max",
+          "full"
+        ],
+        "name": "default",
+        "num_classes": 12,
+        "output_dir": "outputs/default",
+        "overlap": 0.5,
+        "prior": "uniform",
+        "seed": 20270214,
+        "signature_upweight": 0.9,
+        "source": "generator",
+        "test_size": 0.4,
+        "traces_per_class": 600,
+        "vantages": [
+          "network",
+          "platform",
+          "providers"
+        ]
+      },
+      "measured": {
+        "bank": [
+          "random_forest",
+          "knn"
+        ],
+        "bootstrap": 100,
+        "data_root": null,
+        "defenses": [
+          "none",
+          "pad-512",
+          "shuffle",
+          "constant-rate",
+          "cover",
+          "pad-max",
+          "full"
+        ],
+        "name": "measured",
+        "num_classes": 12,
+        "output_dir": "outputs/measured",
+        "overlap": 0.15,
+        "prior": "uniform",
+        "seed": 20270214,
+        "signature_upweight": 0.9,
+        "source": "measured",
+        "test_size": 0.4,
+        "traces_per_class": 130,
+        "vantages": [
+          "network",
+          "platform",
+          "providers"
+        ]
+      }
+    },
+    "leakbench_version": "0.1.0",
+    "note": "paper-scale study",
+    "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+    "python_version": "3.13.5",
+    "seed": 20270214,
+    "taxonomy_hash": "8ba36962dec5",
+    "taxonomy_name": "tax-v1/12c-4f"
+  },
+  "status": "real_computation_at_paper_scale",
+  "summary": {
+    "RQ1_advantage_by_vantage": {
+      "network": 0.6409090909090909,
+      "platform": 0.8746212121212121,
+      "providers": 0.9928030303030303
+    },
+    "RQ1_mi_bits": {
+      "network": 2.015783179618645,
+      "platform": 3.0325506811241496,
+      "providers": 3.5270378178135715
+    },
+    "RQ1_refinement_warnings": [],
+    "RQ3_by_family": {
+      "coding": 0.9015151515151515,
+      "ops": 0.7878787878787878,
+      "personal": 0.9545454545454546,
+      "research": 0.8545454545454546
+    },
+    "RQ3_by_length_band": {
+      "long": 0.8830640187492291,
+      "short": 0.865770076296392
+    },
+    "RQ5_max_mi_abs_error_bits": 0.0826199249806483,
+    "RQ6_measured": {
+      "network": {
+        "advantage_ci_at_reference_seed": [
+          0.10572552447552447,
+          0.16874999999999998
+        ],
+        "max": 0.2115384615384615,
+        "mean": 0.18146853146853145,
+        "mi_bits_at_reference_seed": 0.3673216728551124,
+        "min": 0.1328671328671329,
+        "std": 0.028735217917908173
+      },
+      "platform": {
+        "advantage_ci_at_reference_seed": [
+          0.553277972027972,
+          0.6224650349650349
+        ],
+        "max": 0.6223776223776224,
+        "mean": 0.5905594405594405,
+        "mi_bits_at_reference_seed": 2.102831642233161,
+        "min": 0.5262237762237761,
+        "std": 0.034691235677797125
+      },
+      "providers": {
+        "advantage_ci_at_reference_seed": [
+          0.7586538461538461,
+          0.827840909090909
+        ],
+        "max": 0.8006993006993006,
+        "mean": 0.7916083916083915,
+        "mi_bits_at_reference_seed": 2.5871262676052424,
+        "min": 0.7779720279720279,
+        "std": 0.008079874131672271
+      }
+    },
+    "RQ6_openworld": [
+      {
+        "f1": 0.8161006835195834,
+        "monitored_base_rate": 0.5,
+        "precision": 0.8514829069504188,
+        "recall": 0.7835416666666667
+      },
+      {
+        "f1": 0.6855541718555417,
+        "monitored_base_rate": 0.2,
+        "precision": 0.8521671826625387,
+        "recall": 0.5734375
+      },
+      {
+        "f1": 0.2508833922261484,
+        "monitored_base_rate": 0.05,
+        "precision": 0.8255813953488372,
+        "recall": 0.14791666666666667
+      }
+    ],
+    "RQ6_ordering_steps": {
+      "network<platform": {
+        "holds_in_seeds": 5,
+        "mean_gap": 0.40909090909090906,
+        "min_gap": 0.3409090909090909,
+        "n_seeds": 5,
+        "p_value_one_sided": 1.9942770516706293e-05,
+        "t_statistic": 19.609244552254236
+      },
+      "platform<providers": {
+        "holds_in_seeds": 5,
+        "mean_gap": 0.2010489510489511,
+        "min_gap": 0.1678321678321678,
+        "n_seeds": 5,
+        "p_value_one_sided": 7.534185593236487e-05,
+        "t_statistic": 14.007734192605257
+      }
+    },
+    "RQ8_live": {
+      "capture_mode": "tls_captured_proxy",
+      "net_below_platform_in_seeds": 2,
+      "per_seed": [
+        {
+          "network": 0.5714285714285714,
+          "platform": 0.7857142857142857,
+          "providers": 0.8571428571428571,
+          "seed": 20270214,
+          "size_only": 0.5071428571428572,
+          "timing_only": 0.42142857142857143
+        },
+        {
+          "network": 0.4571428571428572,
+          "platform": 0.8071428571428572,
+          "providers": 0.7857142857142857,
+          "seed": 20270215,
+          "size_only": 0.4357142857142857,
+          "timing_only": 0.25000000000000006
+        }
+      ]
+    }
+  }
+}

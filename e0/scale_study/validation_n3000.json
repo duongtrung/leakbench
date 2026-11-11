@@ -1,0 +1,59 @@
+{
+  "result": {
+    "rq": "RQ5_validation",
+    "K": 12,
+    "rows": [
+      {
+        "p": 0.0,
+        "analytic_mi_bits": 3.584962500721156,
+        "estimated_mi_bits": 3.584962500721156,
+        "analytic_bayes_risk": 0.0,
+        "estimated_bayes_risk": 0.0,
+        "mi_abs_error": 0.0
+      },
+      {
+        "p": 0.2,
+        "analytic_mi_bits": 2.2634182778067244,
+        "estimated_mi_bits": 2.267890124747697,
+        "analytic_bayes_risk": 0.18333333333333324,
+        "estimated_bayes_risk": 0.18333333333333332,
+        "mi_abs_error": 0.004471846940972579
+      },
+      {
+        "p": 0.4,
+        "analytic_mi_bits": 1.3684259969602417,
+        "estimated_mi_bits": 1.350947724670192,
+        "analytic_bayes_risk": 0.3666666666666667,
+        "estimated_bayes_risk": 0.3721527777777778,
+        "mi_abs_error": 0.017478272290049723
+      },
+      {
+        "p": 0.6,
+        "analytic_mi_bits": 0.6895006564828345,
+        "estimated_mi_bits": 0.6942443694368589,
+        "analytic_bayes_risk": 0.55,
+        "estimated_bayes_risk": 0.5499305555555556,
+        "mi_abs_error": 0.004743712954024315
+      },
+      {
+        "p": 0.8,
+        "analytic_mi_bits": 0.21140523844597103,
+        "estimated_mi_bits": 0.19713145362300524,
+        "analytic_bayes_risk": 0.7333333333333334,
+        "estimated_bayes_risk": 0.7436805555555556,
+        "mi_abs_error": 0.01427378482296579
+      },
+      {
+        "p": 0.95,
+        "analytic_mi_bits": 0.01722580482806446,
+        "estimated_mi_bits": 0.007644285719717498,
+        "analytic_bayes_risk": 0.8708333333333333,
+        "estimated_bayes_risk": 0.9007638888888889,
+        "mi_abs_error": 0.009581519108346963
+      }
+    ],
+    "max_mi_abs_error": 0.017478272290049723,
+    "note": "estimated MI is a LOWER bound; it should track (from below) the analytic curve"
+  },
+  "note": "E0 recompute, n_per_class=3000 as in rerun_validation.py"
+}

@@ -1,0 +1,127 @@
+{
+  "provenance": {
+    "config": {
+      "bank": [
+        "random_forest",
+        "knn"
+      ],
+      "bootstrap": 50,
+      "data_root": null,
+      "defenses": [
+        "none",
+        "pad-512",
+        "shuffle",
+        "constant-rate",
+        "cover",
+        "pad-max",
+        "full"
+      ],
+      "name": "synthetic_demo",
+      "num_classes": 12,
+      "output_dir": "outputs/synthetic_demo",
+      "overlap": 0.5,
+      "prior": "uniform",
+      "seed": 20270214,
+      "signature_upweight": 0.9,
+      "source": "generator",
+      "test_size": 0.4,
+      "traces_per_class": 40,
+      "vantages": [
+        "network",
+        "platform",
+        "providers"
+      ]
+    },
+    "leakbench_version": "0.1.0",
+    "note": "synthetic smoke-test output, not a paper result",
+    "platform": "Linux-6.18.5-fc-v18-x86_64-with-glibc2.39",
+    "python_version": "3.11.15",
+    "seed": 20270214,
+    "taxonomy_hash": "8ba36962dec5",
+    "taxonomy_name": "tax-v1/12c-4f"
+  },
+  "result": {
+    "advantage_by_vantage": {
+      "network": 0.5681818181818181,
+      "platform": 0.8522727272727273,
+      "providers": 0.9829545454545454
+    },
+    "empirical_net_le_plat": true,
+    "entropy_bits": 3.584962500721156,
+    "refinement_warnings": [],
+    "rq": "RQ1_vantage",
+    "vantages": {
+      "network": {
+        "accuracy": 0.6041666666666667,
+        "advantage": 0.5681818181818181,
+        "advantage_ci": [
+          0.47855113636363633,
+          0.6420454545454546
+        ],
+        "bayes_risk": 0.3958333333333333,
+        "best_estimator": "random_forest",
+        "guessing_risk": 0.9166666666666666,
+        "interpretation": "advantage and MI are LOWER bounds on leakage ('at least this much leaks'); never an upper bound on privacy.",
+        "mi_lower_bound_bits": 2.0229868220790728,
+        "n_test": 192,
+        "n_train": 288,
+        "note": "",
+        "num_classes": 12,
+        "per_estimator_advantage": {
+          "knn": 0.49431818181818177,
+          "random_forest": 0.5681818181818181
+        },
+        "subgroups": {},
+        "vantage": "network"
+      },
+      "platform": {
+        "accuracy": 0.8645833333333334,
+        "advantage": 0.8522727272727273,
+        "advantage_ci": [
+          0.8024147727272727,
+          0.8977272727272727
+        ],
+        "bayes_risk": 0.13541666666666666,
+        "best_estimator": "random_forest",
+        "guessing_risk": 0.9166666666666666,
+        "interpretation": "advantage and MI are LOWER bounds on leakage ('at least this much leaks'); never an upper bound on privacy.",
+        "mi_lower_bound_bits": 3.0075573777538525,
+        "n_test": 192,
+        "n_train": 288,
+        "note": "",
+        "num_classes": 12,
+        "per_estimator_advantage": {
+          "knn": 0.6988636363636364,
+          "random_forest": 0.8522727272727273
+        },
+        "subgroups": {},
+        "vantage": "platform"
+      },
+      "providers": {
+        "accuracy": 0.984375,
+        "advantage": 0.9829545454545454,
+        "advantage_ci": [
+          0.9671875000000001,
+          1.0
+        ],
+        "bayes_risk": 0.015625,
+        "best_estimator": "random_forest",
+        "guessing_risk": 0.9166666666666666,
+        "interpretation": "advantage and MI are LOWER bounds on leakage ('at least this much leaks'); never an upper bound on privacy.",
+        "mi_lower_bound_bits": 3.4992301835140345,
+        "n_test": 192,
+        "n_train": 288,
+        "note": "",
+        "num_classes": 12,
+        "per_estimator_advantage": {
+          "knn": 0.8522727272727273,
+          "random_forest": 0.9829545454545454
+        },
+        "subgroups": {},
+        "vantage": "providers"
+      }
+    }
+  },
+  "status": "synthetic smoke-test output, not a paper result",
+  "warning": "These numbers are from the calibrated generator, not a deployed system. Do not cite as paper results."
+}

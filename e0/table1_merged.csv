@@ -1,0 +1,10 @@
+level,setting,classes,sessions,seeds,provenance,size_only,timing_only,network_adv,network_lo,network_hi,platform_adv,platform_lo,platform_hi,providers_adv,providers_lo,providers_hi
+synthetic,calibrated generator,12,7200,20270214,recomputed on Mac = stored,,,0.6409,0.6197,0.6584,0.8746,0.8625,0.886,0.9928,0.989,0.9955
+measured,"real local tools, mean of 5 seeds (lo/hi = min/max over seeds)",12,1560,5 seeds,recomputed on Mac,,,0.1815,0.1329,0.2115,0.5906,0.5262,0.6224,0.7916,0.778,0.8007
+L-prog,"scripted planner, live TLS, loopback",6,420,20270214,"stored (original run, Linux)",0.5214,0.4571,0.6143,0.5211,0.6752,0.7857,0.7177,0.847,0.7929,0.7357,0.8537
+L-prog,"scripted planner, live TLS, loopback",6,420,20270214,recomputed on Mac (macOS loopback),0.5071,0.4214,0.5714,0.4929,0.6466,0.7857,0.7177,0.847,0.8571,0.8,0.9109
+L-LLM,"llama-3.3-70b planner, live TLS, loopback",6,150,20270214,"stored (original run), re-read",0.68,0.0,0.64,0.5,0.78,0.88,0.7695,0.96,0.92,0.84,0.98
+L-LLM,"llama3.3:70b Q4_K_M, local Ollama, live TLS, loopback; every session hit the 12-step cap",6,150,20270214,new run on Mac (E2),0.76,0.72,0.8,0.66,0.9,1.0,1.0,1.0,1.0,1.0,1.0
+L-LLM,"llama3.3:70b Q4_K_M, local Ollama, live TLS, loopback; every session hit the 12-step cap",6,150,20270215,new run on Mac (E2),0.8,0.88,0.88,0.78,0.96,0.96,0.9,1.0,0.96,0.9,1.0
+WAN,"scripted planner, live TLS, AWS us-east-1",6,420,20270214,"stored (original run), re-read",0.4571,0.2643,0.6357,0.5214,0.7143,0.9286,0.8786,0.9714,0.9857,0.9643,1.0
+WAN,"scripted planner, live TLS, AWS us-east-1",6,420,20270215,recomputed on Mac from stored traces = stored,,,0.3786,0.2855,0.4716,0.8214,0.7498,0.8929,0.8143,0.7429,0.8716

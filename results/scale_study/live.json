@@ -1,0 +1,249 @@
+{
+  "elapsed_s": 6.209906578063965,
+  "provenance": {
+    "config": {
+      "args": {
+        "draws": 8,
+        "generator_config": "configs/default.yaml",
+        "live_per_class": 70,
+        "measured_config": "configs/measured.yaml",
+        "no_tls": false,
+        "only": null,
+        "openworld_total": 24000,
+        "output": "outputs/scale_study",
+        "quick": false,
+        "seeds": 5,
+        "skip": null,
+        "tax_sizes": [
+          8,
+          12,
+          16,
+          24
+        ],
+        "validation_per_class": 300
+      },
+      "generator": {
+        "bank": [
+          "random_forest",
+          "knn"
+        ],
+        "bootstrap": 200,
+        "data_root": null,
+        "defenses": [
+          "none",
+          "pad-512",
+          "shuffle",
+          "constant-rate",
+          "cover",
+          "pad-max",
+          "full"
+        ],
+        "name": "default",
+        "num_classes": 12,
+        "output_dir": "outputs/default",
+        "overlap": 0.5,
+        "prior": "uniform",
+        "seed": 20270214,
+        "signature_upweight": 0.9,
+        "source": "generator",
+        "test_size": 0.4,
+        "traces_per_class": 600,
+        "vantages": [
+          "network",
+          "platform",
+          "providers"
+        ]
+      },
+      "measured": {
+        "bank": [
+          "random_forest",
+          "knn"
+        ],
+        "bootstrap": 100,
+        "data_root": null,
+        "defenses": [
+          "none",
+          "pad-512",
+          "shuffle",
+          "constant-rate",
+          "cover",
+          "pad-max",
+          "full"
+        ],
+        "name": "measured",
+        "num_classes": 12,
+        "output_dir": "outputs/measured",
+        "overlap": 0.15,
+        "prior": "uniform",
+        "seed": 20270214,
+        "signature_upweight": 0.9,
+        "source": "measured",
+        "test_size": 0.4,
+        "traces_per_class": 130,
+        "vantages": [
+          "network",
+          "platform",
+          "providers"
+        ]
+      }
+    },
+    "leakbench_version": "0.1.0",
+    "note": "paper-scale study",
+    "platform": "Linux-7.0.0-1006-aws-x86_64-with-glibc2.43",
+    "python_version": "3.14.4",
+    "seed": 20270214,
+    "taxonomy_hash": "8ba36962dec5",
+    "taxonomy_name": "tax-v1/12c-4f"
+  },
+  "result": {
+    "capture_mode": "tls_captured_proxy",
+    "classes": [
+      "literature_review",
+      "trip_planning",
+      "debug_failing_test",
+      "status_reporting",
+      "market_scan",
+      "meeting_scheduling"
+    ],
+    "entropy_bits": 2.584962500721156,
+    "gaps": [
+      "loopback not WAN",
+      "programmatic not neural planner"
+    ],
+    "link": "loopback",
+    "net_below_platform_in_seeds": 2,
+    "note": "network sizes are CAPTURED off the proxy socket, not modeled; remaining gaps are recorded in the capture metadata",
+    "per_seed": [
+      {
+        "capture": {
+          "capture": "captured_at_tcp_proxy",
+          "capture_mode": "tls_captured_proxy",
+          "classes": [
+            "literature_review",
+            "trip_planning",
+            "debug_failing_test",
+            "status_reporting",
+            "market_scan",
+            "meeting_scheduling"
+          ],
+          "gaps": [
+            "loopback not WAN",
+            "programmatic not neural planner"
+          ],
+          "link": "loopback",
+          "link_note": "client, proxy and server share one host",
+          "mean_handshake_bytes": 4082.285714285714,
+          "planner": "StochasticReActPlanner",
+          "planner_kind": "programmatic_stochastic",
+          "seed": 20270214,
+          "server": "in-process (loopback)",
+          "tls": "real",
+          "tls_generator": "openssl",
+          "traces_per_class": 70
+        },
+        "mean_trace_length": 4.773809523809524,
+        "n_traces": 420,
+        "projections": {
+          "size_only": 0.5214285714285715,
+          "timing_only": 0.4571428571428572
+        },
+        "seed": 20270214,
+        "vantages": {
+          "network": {
+            "advantage": 0.6142857142857142,
+            "advantage_ci": [
+              0.5210714285714286,
+              0.6751785714285713
+            ],
+            "mi_bits": 1.3632484948826504
+          },
+          "platform": {
+            "advantage": 0.7857142857142857,
+            "advantage_ci": [
+              0.7176785714285715,
+              0.8469642857142855
+            ],
+            "mi_bits": 2.1527132074189144
+          },
+          "providers": {
+            "advantage": 0.7928571428571429,
+            "advantage_ci": [
+              0.7357142857142858,
+              0.8537499999999999
+            ],
+            "mi_bits": 2.214274935000402
+          }
+        }
+      },
+      {
+        "capture": {
+          "capture": "captured_at_tcp_proxy",
+          "capture_mode": "tls_captured_proxy",
+          "classes": [
+            "literature_review",
+            "trip_planning",
+            "debug_failing_test",
+            "status_reporting",
+            "market_scan",
+            "meeting_scheduling"
+          ],
+          "gaps": [
+            "loopback not WAN",
+            "programmatic not neural planner"
+          ],
+          "link": "loopback",
+          "link_note": "client, proxy and server share one host",
+          "mean_handshake_bytes": 4083.4285714285716,
+          "planner": "StochasticReActPlanner",
+          "planner_kind": "programmatic_stochastic",
+          "seed": 20270215,
+          "server": "in-process (loopback)",
+          "tls": "real",
+          "tls_generator": "openssl",
+          "traces_per_class": 70
+        },
+        "mean_trace_length": 4.645238095238096,
+        "n_traces": 420,
+        "projections": {
+          "size_only": 0.4571428571428572,
+          "timing_only": 0.3500000000000001
+        },
+        "seed": 20270215,
+        "vantages": {
+          "network": {
+            "advantage": 0.4928571428571429,
+            "advantage_ci": [
+              0.4285714285714286,
+              0.5860714285714285
+            ],
+            "mi_bits": 1.1560412523102672
+          },
+          "platform": {
+            "advantage": 0.8071428571428572,
+            "advantage_ci": [
+              0.7357142857142858,
+              0.8823214285714285
+            ],
+            "mi_bits": 2.1898186621107096
+          },
+          "providers": {
+            "advantage": 0.75,
+            "advantage_ci": [
+              0.6785714285714285,
+              0.8108928571428571
+            ],
+            "mi_bits": 2.148470371907723
+          }
+        }
+      }
+    ],
+    "planner_kind": "programmatic_stochastic",
+    "rq": "RQ8_live",
+    "seeds": [
+      20270214,
+      20270215
+    ],
+    "traces_per_class": 70
+  },
+  "status": "real_computation_at_paper_scale"
+}
